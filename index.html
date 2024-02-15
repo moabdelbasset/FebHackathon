@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-    </main>
-	<script src="index.js"></script>
-  </body>
+    <title>Love Letter Generator</title>
+    <!-- Include a link to your CSS file here -->
+</head>
+<body>
+    <h1>Love Letter Generator</h1>
+    <form id="loveLetterForm">
+        <div>
+            <label for="toName">To:</label>
+            <input type="text" id="toName" name="toName" placeholder="Recipient's Name">
+        </div>
+        <div>
+            <label for="fromName">From:</label>
+            <input type="text" id="fromName" name="fromName" placeholder="Your Name">
+        </div>
+        <button type="button" id="generateButton">Generate Love Letter</button>
+    </form>
+
+    <div id="loveLetterOutput"></div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
 </html>
