@@ -26,3 +26,6 @@ document.getElementById('generateButton').addEventListener('click', function() {
     });
 });
 
+// Adds a css class to a div in index.html to show hearts on the screen and
+// then make them disappear
+
