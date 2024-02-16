@@ -19,7 +19,7 @@
 <body class="">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Name of project here</a>
+            <a class="navbar-brand" href="index.html">Love letter genie</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,11 +45,11 @@
             <form id="loveLetterForm">
                 <div class="col-sm-12 col-md-6">
                     <label for="toName" class="form-label">To:</label>
-                    <input type="text" id="toName" class="form-control" name="toName" placeholder="Recipient's Name">
+                    <input type="text" id="toName" class="form-control" name="toName" placeholder="Recipient's Name" required>
                 </div>
                 <div class="col-sm-12 col-md-6">
                     <label for="fromName" class="form-label">From:</label>
-                    <input type="text" class="form-control" id="fromName" name="fromName" placeholder="Your Name">
+                    <input type="text" class="form-control" id="fromName" name="fromName" placeholder="Your Name" required>
                 </div>
                 <button type="button" class="btn btn-outline-secondary btn-lg col-6 col-md-3" id="generateButton">
                     Generate Love Letter
@@ -81,7 +81,7 @@
             </section>
 
             <!-- Hidden div that contains an image of hearts that will appear if love letter function successfull -->
-            <div class="test hidden">
+            <div class="test hidden" id="heart">
                 <img src="./assets/images/hearts.png" alt="hearts that appear for an animation" />
             </div>
 
