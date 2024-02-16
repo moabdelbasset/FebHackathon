@@ -12,7 +12,7 @@ document.getElementById('generateButton').addEventListener('click', function() {
         body: JSON.stringify({
             model: "gpt-3.5-turbo", // This model is compatible with the chat endpoint
             messages: [{ "role": "system", "content": "You are a highly skilled poet asked to write a five lines romantic love letter." },
-                       { "role": "user", "content": prompt }]
+                        { "role": "user", "content": prompt }]
         })
     })
     .then(response => response.json())
