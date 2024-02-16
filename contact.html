@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.png">
     <title>Love Letter Generator</title>
     <link href="./assets/css/index.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -16,7 +15,7 @@
         rel="stylesheet">
 </head>
 
-<body class="">
+<body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Name of project here</a>
@@ -27,37 +26,24 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active current" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="features.html">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <a class="nav-link current active" href="contact.html">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container">
-        <h1 class="">Love Letter Generator</h1>
-        <div class="row">
-            <form id="loveLetterForm">
-                <div class="col-sm-12 col-md-6">
-                    <label for="toName" class="form-label">To:</label>
-                    <input type="text" id="toName" class="form-control" name="toName" placeholder="Recipient's Name">
-                </div>
-                <div class="col-sm-12 col-md-6">
-                    <label for="fromName" class="form-label">From:</label>
-                    <input type="text" class="form-control" id="fromName" name="fromName" placeholder="Your Name">
-                </div>
-                <button type="button" class="btn btn-outline-secondary btn-lg col-6 col-md-3" id="generateButton">
-                    Generate Love Letter
-                </button>
-            </form>
-        </div>
 
-        <div id="loveLetterOutput"></div>
+    <div class="container">
+        <div class="row">
+            <h1>Contact us</h1>
+
+        </div>
     </div>
 
     <footer class="text-center text-lg-start text-white" style="background-color: #3e4551">
@@ -78,12 +64,16 @@
                             Reiciendis assumenda iusto sapiente inventore animi?
                         </p>
                     </div>
-            </section>
+                    <!--Grid column-->
 
-            <!-- Hidden div that contains an image of hearts that will appear if love letter function successfull -->
-            <div class="test hidden">
-                <img src="./assets/images/hearts.png" alt="hearts that appear for an animation" />
-            </div>
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+
+                    </div>
+                    <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+
 
 
             <!-- Section: Social media -->
@@ -99,6 +89,7 @@
             </section>
             <!-- Section: Social media -->
         </div>
+        <!-- Grid container -->
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
@@ -107,9 +98,11 @@
         </div>
         <!-- Copyright -->
     </footer>
+    <!-- Footer -->
 
 
     <script src="https://kit.fontawesome.com/0f99558fa2.js" crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
