@@ -1,3 +1,7 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
 .current {
     border-bottom: 2px solid black !important;
     padding-bottom: 2px !important;
@@ -15,4 +19,12 @@ body {
 
 footer {
     margin-top: auto;
+}
+
+#generateButton {
+    margin-top: 15px !important;
+}
+
+h1 {
+    margin-top: 50px !important;
 }
