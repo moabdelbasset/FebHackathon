@@ -1,7 +1,5 @@
 # PROJECT TITLE - Hackathon - February 2024<!-- omit from toc -->
 
-
-My mod KATE
 This project is a website where users can generate a love letter to their loved one.
 
 EXPLAIN OTHER MAIN FEATURES HERE
