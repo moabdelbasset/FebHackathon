@@ -48,11 +48,16 @@ body {
     transform: translate(-50%, -50%);
     z-index: 99;
     animation-name: hearts;
-    animation-duration: 4s;
+    animation-duration: 3s;
     background-color: transparent;
     display: block;
 }
 
 .hidden {
     display: none;
+}
+
+#loveLetterOutput {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }

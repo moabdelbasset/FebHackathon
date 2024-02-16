@@ -42,6 +42,7 @@ document.getElementById('generateButton').addEventListener('click', function() {
         console.log(data);
         // Adjust how you access the generated text based on AI21's response structure
         if (data.completions && data.completions.length > 0) {
+            showHearts()
             document.getElementById('loveLetterOutput').textContent = data.completions[0].data.text;
         } else {
             document.getElementById('loveLetterOutput').textContent = 'Failed to generate love letter. Please try again.';
@@ -52,3 +53,10 @@ document.getElementById('generateButton').addEventListener('click', function() {
         document.getElementById('loveLetterOutput').textContent = 'Failed to generate love letter. Please try again.';
     });
 });
+
+async function showHearts() {
+    // code to show hearts and handle disappear logic
+    document.getElementById("heart").classList.remove("hidden");
+    await new Promise((resolve) => setTimeout(resolve, 3000)); // Wait for 4 seconds
+    document.getElementById("heart").classList.add("hidden");
+}
