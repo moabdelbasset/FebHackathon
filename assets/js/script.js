@@ -7,7 +7,7 @@ document.getElementById('generateButton').addEventListener('click', function() {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer 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' // Replace YOUR_API_KEY with your actual OpenAI API key
+            'Authorization': 'Bearer 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' // Replace YOUR_API_KEY with your actual OpenAI API key
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo", // This model is compatible with the chat endpoint
