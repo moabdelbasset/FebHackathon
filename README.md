@@ -1,110 +1,189 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# PROJECT TITLE - Hackathon - February 2024<!-- omit from toc -->
 
-Welcome Carl,
+This project is a website where users can generate a love letter to their loved one.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+EXPLAIN OTHER MAIN FEATURES HERE
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+DESCRIBE COLOUR SCHEME AND LAYOUT BRIEFLY
 
-## Gitpod Reminders
+PICTURE of Main Page on all devices
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Link to deployed site
 
-`python3 -m http.server`
+This is joint project for the February 2024 Hackathon with Code Institute. Below are links to all authors' GitHub profiles:
 
-A blue button should appear to click: _Make Public_,
+[Carl Ellis](https://github.com/carl2087/)\
+[Mohamed Ayman](https://github.com/moabdelbasset)\
+[Emmanuel Oluwadare](https://github.com/Emmy-Dare274)\
+[Diarmuid Henry](https://github.com/diarmuidhenry/)\
+[Theresa Wolff](https://github.com/carl2087/)\
+[Ahmad Jawed Hazrati](https://github.com/Ahmad-Hazrati)\
+[Kate McGuane](https://github.com/KateMcGuane)
 
-Another blue button should appear to click: _Open Browser_.
+## Table of Contents<!-- omit from toc -->
+- [Introduction](#introduction)
+- [Aim](#aim)
+  - [Website Objective](#website-objective)
+  - [Key Features](#key-features)
+- [Potential Users](#potential-users)
+  - [User Goals](#user-goals)
+  - [User Testimonials](#user-testimonials)
+- [Design \& Development](#design--development)
+  - [5 Planes of UX](#5-planes-of-ux)
+    - [Strategy](#strategy)
+    - [Scope](#scope)
+    - [Structure](#structure)
+    - [Skeleton](#skeleton)
+    - [Surface](#surface)
+  - [Wireframes](#wireframes)
+    - [Desktop \& Tablet](#desktop--tablet)
+    - [Mobile](#mobile)
+  - [Features](#features)
+- [Technology \& Resources](#technology--resources)
+- [Deployment](#deployment)
+- [Issues/Bugs](#issuesbugs)
+  - [Resolved](#resolved)
+  - [Unresolved](#unresolved)
+- [Testing \& Validation](#testing--validation)
+  - [Functional Testing of Website](#functional-testing-of-website)
+  - [Browser Testing](#browser-testing)
+    - [Mozilla Firefox](#mozilla-firefox)
+    - [Safari](#safari)
+    - [Microsoft Edge](#microsoft-edge)
+    - [Opera](#opera)
+  - [WAVE Evalutation Tool](#wave-evaluation-tool)
+  - [PageSpeed Insight Tests](#pagespeed-insight-tests)
+  - [HTML Code Validation](#html-code-validation)
+  - [CSS Code Validation](#css-code-validation)
+- [Future Improvements/Development](#future-improvementsdevelopment)
+- [Acknowledgments](#acknowledgments)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Introduction
 
-A blue button should appear to click: _Make Public_,
+## Aim
 
-Another blue button should appear to click: _Open Browser_.
+### Website Objective
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Key Features
 
-To log into the Heroku toolbelt CLI:
+## Potential Users
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### User Goals
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- **Generate a letter**: The primary goal of users engaging with the website game is to write a love letter.
 
-------
+### User Testimonials
 
-## Release History
+## Design \& Development
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### 5 Planes of UX
 
-**September 20 2023:** Update Python version to 3.9.17.
+#### Strategy
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Create a simple, engaging Rock Paper Scissors Lizard Spock game site, including single and multiplayer experiences with user-friendly accessibility.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+#### Scope
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Include a Player v Player, as well as a Player v Computer part to the game. Use clear images to help show the user results, as well as to guide them through the process of the game.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+#### Structure
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+A *Home* page where user/s can either choose to read instructions, or they can choose to start a game. Once they choose which game to start, they are guided through each round by messages and icons appearing on screen determined by their choice and either their friend's choice or the computer's choice, depending on the game. Once the game has been won/lost, the user returns to the *Home* screen, where the result is clearly shown, and they can start another game.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### Skeleton
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+A simple title and 3 buttons(*Instructions*, *Play against the computer* and *Play against a friend*) appear when the pages loads. As gameplay commences, icons clealy representing the 5 choices appear for the user/s to choose from. All choices chosen are clearly shown, and results are clearly displayed for each round, as well as an overall score.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+See [Wireframes](#wireframes) below.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+#### Surface
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+A simple, two toned colour scheme is used throughout, to avoid distracting the user's focus from the game area. All clickable buttons and icons will highlight when hovered over, in order to show where the user can and cannot click. Icons will show frames to represent results: green symbolising a win, red symbolising a loss and grey symbolising a draw.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Wireframes
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+#### Desktop \& Tablet
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+#### Mobile
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Features
 
-------
 
-## FAQ about the uptime script
+## Technology \& Resources
 
-**Why have you added this script?**
+- **IDE :** 
+- **Languages :** HTML for basic page structure. CSS for styling. JavaScript for interactivity. Markdown for this readme.
+- **Template :** The [CodeInstitute Gitpod template](https://github.com/Code-Institute-Org/gitpod-full-template) was used in order to install all the relevant tools for the code to function.
+- [Github](https://github.com/) was used to host the project. Each author worked on their own self-titled branch before committing changes - after group approval - to the main branch.
+- [Balsamiq](https://balsamiq.com/) was used to create wireframes for mobile, tablet and desktop ???
+- [Favicon.io](https://favicon.io/favicon-generator/) was used to find the page's favicon ???
+- [WAVE](https://wave.webaim.org/) and [PageSpeed Insights](https://pagespeed.web.dev/) testing tools were used to locate minor issues and check both accessibility and performance. 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Deployment
 
-**How will this affect me?**
+Once the basic design of the website was finished, we deployed it to GitHub Pages. [The history of all deployed versions of the site can be found here](https://github.com/moabdelbasset/FebHackathon/deployments).
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### How to Deploy to GitHub Pages
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+1. Log in to [GitHub](https://github.com/).
+2. Select *FebHackathon* from the list of repositories, of any of the authors.
+3. Click Settings > Pages.
+4. Under *Source*, select *Deploy from a branch*.
+5. Under *Branch*, select *main* and */root*, then click *Save*.
+6. Wait a couple of minutes for the site to deploy, then navigate back to the repository.
+7. Click *Deployments*, which now should have appeared on the main repository page.
+8. Under *Active Deployments*, click the link https://moabdelbasset.github.io/FebHackathon/. (The deployed page will open in the current tab).
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### How to Clone Repository
 
-**So….?**
+1. Go to the [GitHub repository](https://github.com/moabdelbasset/FebHackathon/).
+2. Click the green *Code* drop-down button.
+3. Click *HTTPS* and copy the URL.
+4. Open your IDE, and open a terminal.
+5. Type `git clone url`, replacing `url` with the URL copied in step 3.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Issues/Bugs
 
-**Can I opt out?**
+### Resolved
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### Unresolved
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Testing \& Validation
 
-**Anything more?**
+### Functional Testing of Website
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+#### Home Page
 
----
+#### Other Page/s?
 
-Happy coding!
+### Browser Testing
+
+The above testing is performed using Chrome as the browser. These tests were repeated on the following browsers, all of which also passed in all criteria.
+
+#### Mozilla Firefox
+
+#### Safari
+
+#### Microsoft Edge
+
+#### Opera
+
+### WAVE Evaluation Tool
+
+WAVE revealed no errors and no contrast errors. As this needed to be tested throughout all moments of use, no single screenshot could show this.
+
+### PageSpeed Insight Tests
+
+### JSHint
+
+JSHint returned no errors, (((only ____ warnings about functions being contained within other functions. This is deemed acceptable for this project and so does not need addressing))).
+
+### HTML Code Validation
+
+### CSS Code Validation
+
+## Future Improvements/Development
+
+## Acknowledgments
+
+- Hackathon Staff
