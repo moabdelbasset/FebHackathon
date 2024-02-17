@@ -1,9 +1,24 @@
-* {
-    font-family: "Poppins", sans-serif;
-}
+:root {
+    /* Fonts */
+    --letter-font: "Montez", cursive;
+    --main-font: 'Poppins', sans-serif;
+    
+    /* Colors  */
+    --red: #c00000;
+    --deep-carmine-pink: #ff3334;
+    --brink-pink: #ff6f77;
+    --light-pink: #ffbbc1;
+    --mainly-red: #ffdee3;
+    --semi-pink: #ff8896;
+    --white-smoke: #f3f3f3;
+
+     /* Utilities */
+     --smal-box-shadow: 1px -1px 7px 0 #00000061;
+     --border: 1px solid #00000030;
+ }
 
 .current {
-    border-bottom: 2px solid black !important;
+    border-bottom: 2px solid var(--red) !important;
     padding-bottom: 2px !important;
 }
 
@@ -60,4 +75,62 @@ body {
 #loveLetterOutput {
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+
+/* Navbar section */
+nav.navbar.navbar-expand-lg.bg-body-tertiary {
+    background: #ff8896 !important;
+}
+
+.navbar-nav .nav-link.show {
+    color: var(--mainly-red) !important;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show:hover {
+    color: var(--red) !important;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    font-size: larger;
+}
+
+a.nav-link {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color: var(--mainly-red) !important;
+}
+
+/* Footer section */
+/* footer.text-center.text-lg-start.text-white {
+    background: #ff8896 !important;    
+} */
+
+a {
+    color: #555555;
+    transition: color ease-in-out 0.3s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:hover i {
+    color: var(--red);
+    transition: color ease-in-out 0.3s;
+}
+
+
+i {
+    color: var(--mainly-red);
+    font-size: 1.6rem;
+    padding: 7px;
+    vertical-align: middle;
+}
+
+i:hover, .active i {
+    cursor: pointer;
+    transition: color ease-in-out 0.3s;
+    color: var(--red);
 }
