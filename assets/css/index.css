@@ -65,24 +65,39 @@ body {
 
 /* Custom Button Styles */
 .icon-button {
-    background-image: url('../icons/copy.png'); /* Replace with the actual path to your image */
-    background-size: cover; /* Cover the entire button area */
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none; /* Remove default border */
-    color: white; /* Set text color */
-    padding: 20px; /* Add padding to increase the clickable area */
-    cursor: pointer; /* Change mouse pointer on hover */
-    /* Adjust width and height as necessary to fit your specific icon dimensions */
-    width: 100px; /* Example width */
-    height: 100px; /* Example height */
-    border-radius: 50%; /* Round the corners to match the icon shape */
-    text-align: center; /* Center the text */
-    line-height: 100px; /* Align text vertically, should match button height */
-    overflow: hidden; /* Hide overflow */
-    transition: transform 0.3s; /* Smooth transition for hover effects */
+    background: url('../icons/copy.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    width: 50px; /* Set the width as needed */
+    height: 50px; /* Set the height as needed */
+    cursor: pointer;
+    text-indent: -9999px; /* Hide the text */
 }
+
 
 .icon-button:hover {
     transform: scale(1.1); /* Slightly increase button size on hover */
+}
+
+/* Styles for the love letter box */
+.love-letter-box {
+    border: 1px solid #ddd; /* Adds a light border */
+    padding: 20px; /* Adds some padding inside the box */
+    margin-top: 20px; /* Adds space between the form and the box */
+    border-radius: 10px; /* Rounds the corners */
+    background-color: #fefefe; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    min-height: 100px; /* Minimum height */
+    width: auto; /* Adjust width as needed, or use max-width */
+    word-wrap: break-word; /* Ensures the content wraps nicely */
+}
+
+#whatsapp-button {
+    background: url('../icons/whatsapp.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    width: 50px; /* Set the width as needed */
+    height: 50px; /* Set the height as needed */
+    cursor: pointer;
+    text-indent: -9999px; /* Hide the text */
 }
