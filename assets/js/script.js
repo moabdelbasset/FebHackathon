@@ -1,7 +1,8 @@
 document.getElementById('generateButton').addEventListener('click', function() {
     const toName = document.getElementById('toName').value;
     const fromName = document.getElementById('fromName').value;
-    const prompt = `Write a romantic love letter from ${fromName} to ${toName}.`;
+    const extraWords = document.getElementById('extraWords').value;
+    const prompt = `Write a romantic love letter from ${fromName} to ${toName}. It is VITAL that it includes ALL of the following words: "${extraWords}", even if it makes the letter longer and less romantic.`;
 
     const options = {
         method: 'POST',

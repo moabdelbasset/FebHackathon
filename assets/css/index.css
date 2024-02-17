@@ -112,6 +112,7 @@ body {
   margin: 30px 15px;
   font-family: var(--letter-font);
   font-weight: 600;
+  font-size: 1.2em;
   color: var(--deep-carmine-pink);
 }
 
@@ -271,6 +272,8 @@ footer.text-center.text-lg-start.text-white {
     min-height: 100px; /* Minimum height */
     width: auto; /* Adjust width as needed, or use max-width */
     word-wrap: break-word; /* Ensures the content wraps nicely */
+    overflow: auto; 
+    max-height: 500px; 
 }
 
 #whatsapp-button {
