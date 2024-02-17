@@ -75,3 +75,10 @@ document.getElementById('copyButton').addEventListener('click', function() {
         console.error('Error copying text: ', err);
     });
 });
+
+//Sharing message on whatsapp
+function shareOnWhatsApp() {
+    var loveLetterText = document.getElementById('loveLetterOutput').innerText;
+    var whatsappUrl = "https://wa.me/?text=" + encodeURIComponent(loveLetterText);
+    window.open(whatsappUrl, '_blank');
+}
