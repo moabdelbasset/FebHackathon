@@ -2,6 +2,9 @@
 function printMessage(message) {
     clearInterval(interval); // Clear any existing interval
     document.getElementById('loveLetterOutput').textContent = ''; // Clear existing text
+    document.getElementById('loveLetterOutput').style.display = 'flex'; // Show message box
+    document.getElementById('copyButton').style.display = 'inline-block'; // Show the copy icon
+    document.getElementById('whatsapp-button').style.display = 'inline-block'; // Show WhatsApp icon
     let index = 0;
     interval = setInterval(function() {
         if (index < message.length) {
@@ -10,7 +13,7 @@ function printMessage(message) {
         } else {
             clearInterval(interval);
         }
-    }, 50); // ms pause between letters. 70: slow reading, 40 quick reading
+    }, 45); // ms pause between letters. 70: slow reading, 40 quick reading
 }
 
 // Define global variable, used in multiple places
@@ -21,7 +24,7 @@ document.getElementById('generateButton').addEventListener('click', function() {
     const toName = document.getElementById('toName').value;
     const fromName = document.getElementById('fromName').value;
     const extraWords = document.getElementById('extraWords').value;
-    const prompt = `Write a romantic love letter from ${fromName} to ${toName}. It is VITAL that it includes ALL of the following words, even if it makes the letter longer and less romantic: "${extraWords}".`;
+    const prompt = `Write a romantic love letter from ${fromName} to ${toName}. It MUST include ALL of the following words exactly as written, even if it makes the letter longer and less romantic: "${extraWords}".`;
 
     const options = {
         method: 'POST',

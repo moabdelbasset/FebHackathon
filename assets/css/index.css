@@ -109,11 +109,22 @@ body {
 }
 
 #loveLetterOutput {
+  display: none; /* hidden when empty, JS changes it to flex */
   margin: 30px 15px;
   font-family: var(--letter-font);
   font-weight: 600;
   font-size: 1.3em;
   color: var(--deep-carmine-pink);
+}
+
+#iconsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#iconsDiv > button {
+  margin: 0px 50px;
 }
 
 /* Navbar section */
@@ -215,13 +226,17 @@ footer.text-center.text-lg-start.text-white {
     }
     #loveLetterForm,
     #loveLetterOutput {
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
+    #loveLetterForm {
+      display: flex;
+    }
+
     #loveLetterOutput {
+        display: none; /* hidden when empty, JS changes it to flex */
         margin: 0 auto;
         padding: 30px 10px;
     }
@@ -256,6 +271,10 @@ footer.text-center.text-lg-start.text-white {
     text-indent: -9999px; /* Hide the text */
 }
 
+#copyButton {
+  display: none; /* Initially hide the copy to clipboard icon */
+}
+
 
 .icon-button:hover {
     transform: scale(1.1); /* Slightly increase button size on hover */
@@ -277,6 +296,7 @@ footer.text-center.text-lg-start.text-white {
 }
 
 #whatsapp-button {
+    display: none; /* Initially hide the WhatsApp icon */
     background: url('../icons/whatsapp.png') no-repeat center center;
     background-size: contain;
     border: none;
