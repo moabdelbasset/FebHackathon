@@ -242,3 +242,28 @@ footer.text-center.text-lg-start.text-white {
         font-weight: 600 !important;
     }
 }
+
+
+/* Custom Button Styles */
+.icon-button {
+    background-image: url('../icons/copy.png'); /* Replace with the actual path to your image */
+    background-size: cover; /* Cover the entire button area */
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none; /* Remove default border */
+    color: white; /* Set text color */
+    padding: 20px; /* Add padding to increase the clickable area */
+    cursor: pointer; /* Change mouse pointer on hover */
+    /* Adjust width and height as necessary to fit your specific icon dimensions */
+    width: 100px; /* Example width */
+    height: 100px; /* Example height */
+    border-radius: 50%; /* Round the corners to match the icon shape */
+    text-align: center; /* Center the text */
+    line-height: 100px; /* Align text vertically, should match button height */
+    overflow: hidden; /* Hide overflow */
+    transition: transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.icon-button:hover {
+    transform: scale(1.1); /* Slightly increase button size on hover */
+}

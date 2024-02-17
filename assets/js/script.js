@@ -60,3 +60,18 @@ async function showHearts() {
     await new Promise((resolve) => setTimeout(resolve, 3000)); // Wait for 4 seconds
     document.getElementById("heart").classList.add("hidden");
 }
+
+
+
+// Listen for clicks on the copy button
+document.getElementById('copyButton').addEventListener('click', function() {
+    // Get the text you want to copy
+    const textToCopy = document.getElementById('loveLetterOutput').innerText;
+    // Use the Clipboard API to copy the text
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        // Optional: Give feedback to the user that text was copied.
+        alert('Love letter copied to clipboard!');
+    }).catch(err => {
+        console.error('Error copying text: ', err);
+    });
+});
