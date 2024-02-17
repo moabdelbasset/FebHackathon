@@ -13,12 +13,12 @@
     --white-smoke: #f3f3f3;
 
      /* Utilities */
-     --smal-box-shadow: 1px -1px 7px 0 #00000061;
-     --border: 1px solid #00000030;
+     --smal-box-shadow: 1px -1px 7px 0 var(--white-smoke);
+     --border: 1px solid var(--light-pink);
  }
 
 .current {
-    border-bottom: 2px solid var(--red) !important;
+    border-bottom: 2px solid var(--deep-carmine-pink) !important;
     padding-bottom: 2px !important;
 }
 
@@ -32,7 +32,7 @@ a:hover {
 }
 
 a:hover i {
-    color: var(--red);
+    color: var(--deep-carmine-pink);
     transition: color ease-in-out 0.3s;
 }
 
@@ -47,7 +47,7 @@ i {
 i:hover, .active i {
     cursor: pointer;
     transition: color ease-in-out 0.3s;
-    color: var(--red);
+    color: var(--deep-carmine-pink);
 }
 
 body {
@@ -114,7 +114,7 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary {
 }
 
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show:hover {
-    color: var(--red) !important;
+    color: var(--deep-carmine-pink) !important;
 }
 
 .navbar-expand-lg .navbar-collapse {
@@ -141,4 +141,53 @@ footer.text-center.text-lg-start.text-white {
 
 .btn-outline-light i {
     color: var(--semi-pink);
+}
+
+/* Button */
+#generateButton {
+    position: relative;
+    display: inline-block;
+    min-width: 120px;
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    margin-top: 20px;
+    color: var(--deep-carmine-pink) !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid var(--deep-carmine-pink) !important;
+    padding: 10px 30px;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 1s, box-shadow 1s;
+    transition-delay: 0s, 1s;
+}
+
+#generateButton:hover {
+    cursor: pointer;
+    transition-delay: 0s, 1s;
+    color: var(--semi-pink);
+    box-shadow: 
+        0 0 10px var(--red),
+        0 0 20px var(--red),
+        0 0 40px var(--red),
+        0 0 80px var(--red),
+        0 0 160px var(--red);
+}
+
+#generateButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color: var(--red) !important;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 1s;
+} 
+
+#generateButton:hover:before {
+    width: 100%;
+
 }
