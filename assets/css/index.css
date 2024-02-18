@@ -11,6 +11,7 @@
   --mainly-red: #ffdee3;
   --semi-pink: #ff8896;
   --white-smoke: #f3f3f3;
+  --black: #000;
 
   /* Utilities */
   --small-box-shadow: 1px -1px 7px 0 var(--brink-pink);
@@ -51,10 +52,10 @@ i:hover,
 }
 
 body {
-  background-image: url('/assets/images/sunset-815270_1280.jpg');
   height: 100vh;
   display: flex;
   flex-direction: column;
+
 }
 
 footer {
@@ -68,9 +69,9 @@ footer {
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 30px !important;
   font-family:var(--letter-font);
   color: var(--deep-carmine-pink) !important;
@@ -115,7 +116,7 @@ body {
   margin: 30px 15px;
   font-family: var(--letter-font);
   font-weight: 600;
-  font-size: 1.3em;
+  font-size: 1.6em;
   color: var(--deep-carmine-pink);
 }
 
@@ -137,24 +138,27 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary {
   box-shadow: var(--small-box-shadow);
 }
 
+#navLogo {
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+}
+
 .navbar-nav .nav-link.show {
   color: var(--mainly-red) !important;
 }
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show:hover {
-  color: var(--deep-carmine-pink) !important;
+  color: #000 !important;
 }
 
-/* .navbar-expand-lg .navbar-collapse {
-  font-size: larger;
-} */
 
 a.nav-link {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  color: var(--mainly-red) !important;
+  color: #000 !important;
 }
 
 /* Footer section  */
@@ -173,6 +177,9 @@ footer.text-center.text-lg-start.text-white {
   color: var(--semi-pink);
 }
 
+.footerText {
+  color: #000 !important;
+}
 
 /* Generate Letter Button */
 #generateButton {
@@ -331,4 +338,19 @@ footer.text-center.text-lg-start.text-white {
 /* Class to make the notification visible */
 .notification.show {
     display: block;
+}
+
+/* team member page */
+
+.profileIMG {
+  border-radius: 100%;
+}
+
+.teamProfileRow {
+  margin-bottom: 20px;
+}
+
+.gitHubPro > i {
+  font-size: 3.5em;
+  color: #ff3334;
 }
