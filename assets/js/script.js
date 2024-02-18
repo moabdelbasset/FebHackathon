@@ -86,15 +86,29 @@ async function showHearts() {
 }
 
 
+//Show notification function
+function showNotification(message, duration = 4000) {
+    const notificationEl = document.getElementById('notification');
+    notificationEl.textContent = message; // Set the message
+    notificationEl.classList.add('show'); // Make it visible
+
+    // Hide the notification after 'duration' milliseconds
+    setTimeout(() => {
+        notificationEl.classList.remove('show');
+    }, duration);
+}
+
 
 // Listen for clicks on the copy button
 document.getElementById('copyButton').addEventListener('click', function() {
+    event.preventDefault();
     // Get the text you want to copy
     const textToCopy = document.getElementById('loveLetterOutput').innerText;
     // Use the Clipboard API to copy the text
     navigator.clipboard.writeText(textToCopy).then(() => {
         // Optional: Give feedback to the user that text was copied.
-        alert('Love letter copied to clipboard!');
+        showNotification('Love letter copied to clipboard!'); 
+        //alert('Love letter copied to clipboard!');
     }).catch(err => {
         console.error('Error copying text: ', err);
     });
