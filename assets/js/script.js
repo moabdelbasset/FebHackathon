@@ -5,6 +5,7 @@ function printMessage(message) {
     document.getElementById('loveLetterOutput').style.display = 'flex'; // Show message box
     document.getElementById('copyButton').style.display = 'inline-block'; // Show the copy icon
     document.getElementById('whatsapp-button').style.display = 'inline-block'; // Show WhatsApp icon
+    document.getElementById('refresh-anchor').style.display = 'inline-block'; // Show refresh icon
     let index = 0;
     interval = setInterval(function() {
         if (index < message.length) {
@@ -128,3 +129,8 @@ document.getElementById('copyButton').addEventListener('click', function() {
      toggle.classList.toggle('dark');
      body.classList.toggle('dark');
  });
+
+ // Refresh page
+ function refreshPage() {
+    window.location.reload();
+}

@@ -18,8 +18,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <!-- Logo here -->
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Love Letter Genie</a>
-            
+            <a class="navbar-brand"  href="index.html"><img id="navLogo" alt="Love letter genie logo" src="./assets/images/love-logo.jpg"/></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,10 +30,7 @@
                         <a class="nav-link active current" aria-current="page" href="index.html"><i class="fas fa-home"></i>Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="features.html"><i class="fas fa-list"></i>Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i>Contact Us</a>
+                        <a class="nav-link active " href="team.html"><i class="fas fa-list"></i>Team Members</a>
                     </li>
                     <button class="theme-toggle-btn" id="toggle-btn">
                         <!-- Theme Swapper  -->
@@ -50,9 +46,10 @@
             
         </div>
     </nav>
-    <div class="container">
+    <!-- Background image -->
+    <div class="container bg-img">
         
-        <h1 class="title"><i class="fas fa-heart"></i>Love Letter Generator<i class="fas fa-heart"></i></h1>
+        <h1 class="title"><i class="fas fa-heart"></i>Love Letter Genie<i class="fas fa-heart"></i></h1>
         <div class="row">
             <form id="loveLetterForm">
                 <div class="col-sm-12 col-md-6">
@@ -72,14 +69,14 @@
                 </button>
                 <!-- Output container for the love letter -->
                 <div id="loveLetterOutput" class="love-letter-box"></div>
-                <button id="copyButton" class="btn icon-button"></button>
-                <button onclick="shareOnWhatsApp()" class="btn btn-outline-secondary" id="whatsapp-button"></button>
+
                 <!-- Notification -->
-                <!-- Place this somewhere appropriate in your HTML -->
                 <div id="notification" class="notification hidden">Love letter copied to clipboard!</div>
                 <div id="iconsDiv">
-                    <button id="copyButton" class="btn icon-button"></button>
-                    <button onclick="shareOnWhatsApp()" class="btn btn-outline-secondary" id="whatsapp-button"></button>
+                    <a id="copyButton" class="btn icon-button" aria-label="copy to clipboard"></a>
+                    <a onclick="shareOnWhatsApp()" class="btn btn-outline-secondary " id="whatsapp-button" aria-label="Share to Whatsapp"></a>
+                    <!-- Refresh Button -->
+                    <a onclick="refreshPage()" class="btn btn-outline-secondary" id="refresh-anchor" aria-label="Refresh Page"></a>
                 </div>
             </form>
         </div>
@@ -87,7 +84,12 @@
         <div id="loveLetterOutput"></div>
     </div>
 
-    <footer class="text-center text-lg-start text-white" style="background-color: #3e4551">
+    <!-- Hidden div that contains an image of hearts that will appear if love letter function successfull -->
+    <div class="heartsDiv hidden" id="heart">
+        <img src="./assets/images/hearts.png" alt="hearts that appear for an animation" />
+    </div>
+
+    <footer class="text-center text-lg-start text-white">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
             <!-- Section: Links -->
@@ -95,48 +97,40 @@
                 <!--Grid row-->
                 <div class="row">
                     <!--Grid column-->
-                    <div class="col-lg-10 col-md-10 mb-10 mb-md-0">
-                        <h5 class="text-uppercase">Project name here</h5>
+                    <div class="col-lg-4 col-md-10 mb-10 mb-md-0 footerText">
+                        <h5 class="text-uppercase">Love Letter Genie</h5>
 
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestiae modi cum ipsam ad, illo possimus laborum ut
-                            reiciendis obcaecati. Ducimus, quas. Corrupti, pariatur eaque?
-                            Reiciendis assumenda iusto sapiente inventore animi?
+                            Welcome to our site Love Letter Genie. This site was created
+                            as part of The Code Institutue Hackathon event February 2024.
                         </p>
                     </div>
             </section>
-
-            <!-- Hidden div that contains an image of hearts that will appear if love letter function successfull -->
-            <div class="test hidden" id="heart">
-                <img src="./assets/images/hearts.png" alt="hearts that appear for an animation" />
-            </div>
-
 
             <!-- Section: Social media -->
             <section class="mb-4 text-center">
 
                 <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://uk.linkedin.com/" role="button"><i
-                        class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://uk.linkedin.com/" role="button" aria-label="external lnik to Linkedin" target="_blank"><i
+                        class="fab fa-linkedin-in" ></i></a>
 
                 <!-- Github -->
                 <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/moabdelbasset/FebHackathon"
-                    role="button"><i class="fab fa-github"></i></a>
+                    role="button" aria-label="external link to github" target="_blank"><i class="fab fa-github"></i></a>
             </section>
-            <!-- Section: Social media -->
-        </div>
+                <!-- Section: Social media -->
+            </div>
 
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            © Copyright:
-            <a class="text-white" href="https://github.com/moabdelbasset/FebHackathon">Team name here</a>
-        </div>
-        <!-- Copyright -->
-
+            <!-- Copyright -->
+            <div class="text-center p-3 footerText">
+                © Copyright:
+                <a class="footerText" href="https://github.com/moabdelbasset/FebHackathon">Roses are #FF0000, Violets are #0000FF</a>
+            </div>
+            <!-- Copyright -->
+        
     </footer>
 
-
+    
     <script src="https://kit.fontawesome.com/0f99558fa2.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
