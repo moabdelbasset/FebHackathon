@@ -82,7 +82,7 @@ This is joint project for the February 2024 Hackathon with Code Institute. Below
 
 ### Colour Scheme
 
-![Love Letter Genie Website Colour Palette](documenatation/love-letter-genie.png)
+![Love Letter Genie Website Colour Palette](documenatation/love-letter-genie-coolors.png)
 
 This colour palette reflects the romantic theme of the website. They are generally soft, with some bolder colours to accent the page and make the words of importance stand out.
 
