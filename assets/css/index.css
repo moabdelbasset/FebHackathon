@@ -15,6 +15,7 @@
   --black-color: black;
   --accent-color-dark: #d0d066;
   --accent-color-light: orangered;
+  --black: #000;
 
   /* Utilities */
   --small-box-shadow: 1px -1px 7px 0 var(--brink-pink);
@@ -57,7 +58,7 @@ i:hover,
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 
@@ -69,6 +70,7 @@ body {
   .theme-toggle-btn .icon {
     fill: var(--accent-color-light) !important;
   }
+
 }
 
 footer {
@@ -78,9 +80,13 @@ footer {
 
 #generateButton {
   margin-top: 15px !important;
+  margin-bottom: 15px !important;
 }
 
 h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,7 +111,7 @@ body {
   }
 }
 
-.test {
+.heartsDiv {
   height: 100vh;
   width: 100vh;
   position: fixed;
@@ -124,9 +130,23 @@ body {
 }
 
 #loveLetterOutput {
+  display: none; /* hidden when empty, JS changes it to flex */
+  margin: 30px 15px;
   font-family: var(--letter-font);
   font-weight: 600;
+  font-size: 1.6em;
   color: var(--deep-carmine-pink);
+}
+
+#iconsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+#iconsDiv > button {
+  margin: 0px 50px;
 }
 
 /* Navbar section */
@@ -136,24 +156,27 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary {
   box-shadow: var(--small-box-shadow);
 }
 
+#navLogo {
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+}
+
 .navbar-nav .nav-link.show {
   color: var(--mainly-red) !important;
 }
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show:hover {
-  color: var(--deep-carmine-pink) !important;
+  color: #000 !important;
 }
 
-/* .navbar-expand-lg .navbar-collapse {
-  font-size: larger;
-} */
 
 a.nav-link {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  color: var(--mainly-red) !important;
+  color: #000 !important;
 }
 
 /* Footer section  */
@@ -170,6 +193,10 @@ footer.text-center.text-lg-start.text-white {
 
 .btn-outline-light i {
   color: var(--semi-pink);
+}
+
+.footerText {
+  color: #000 !important;
 }
 
 /* Generate Letter Button */
@@ -218,22 +245,27 @@ footer.text-center.text-lg-start.text-white {
 }
 
 @media (min-width: 768px) {
-  .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #loveLetterForm,
-  #loveLetterOutput {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+    .title {
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+    }
+    #loveLetterForm,
+    #loveLetterOutput {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-  #loveLetterOutput {
-    padding: 30px 10px;
-  }
+    #loveLetterForm {
+      display: flex;
+    }
+
+    #loveLetterOutput {
+        display: none; /* hidden when empty, JS changes it to flex */
+        margin: 0 auto;
+        padding: 30px 10px;
+    }
 
   .col-md-6 {
     width: 60% !important;
@@ -255,40 +287,87 @@ footer.text-center.text-lg-start.text-white {
 
 /* Custom Button Styles */
 .icon-button {
-  background: url("../icons/copy.png") no-repeat center center;
-  background-size: contain;
-  border: none;
-  width: 50px; /* Set the width as needed */
-  height: 50px; /* Set the height as needed */
-  cursor: pointer;
-  text-indent: -9999px; /* Hide the text */
+    background: url('../icons/copy.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    width: 50px; /* Set the width as needed */
+    height: 50px; /* Set the height as needed */
+    cursor: pointer;
 }
 
 .icon-button:hover {
   transform: scale(1.1); /* Slightly increase button size on hover */
 }
 
-/* Styles for the love letter box */
-.love-letter-box {
-  border: 1px solid #ddd; /* Adds a light border */
-  padding: 20px; /* Adds some padding inside the box */
-  margin-top: 20px; /* Adds space between the form and the box */
-  border-radius: 10px; /* Rounds the corners */
-  background-color: #fefefe; /* Light background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  min-height: 100px; /* Minimum height */
-  width: auto; /* Adjust width as needed, or use max-width */
-  word-wrap: break-word; /* Ensures the content wraps nicely */
+#whatsapp-button:hover  {
+  transform: scale(1.1); /* Slightly increase button size on hover */
 }
 
 #whatsapp-button {
-  background: url("../icons/whatsapp.png") no-repeat center center;
+  /* Initially hide the WhatsApp icon */
+  display: none; 
+  background: url('../icons/whatsapp.png') no-repeat center center;
   background-size: contain;
   border: none;
+  margin: 0 0 0 20px;
   width: 50px; /* Set the width as needed */
   height: 50px; /* Set the height as needed */
   cursor: pointer;
-  text-indent: -9999px; /* Hide the text */
+}
+
+#copyButton {
+  /* Initially hide the copy to clipboard icon */
+  display: none;
+}
+
+/* Styles for the love letter box */
+.love-letter-box {
+    border: 1px solid #ddd; /* Adds a light border */
+    padding: 20px; /* Adds some padding inside the box */
+    margin-top: 20px; /* Adds space between the form and the box */
+    border-radius: 10px; /* Rounds the corners */
+    background-color: #fefefe; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    min-height: 100px; /* Minimum height */
+    width: auto; /* Adjust width as needed, or use max-width */
+    word-wrap: break-word; /* Ensures the content wraps nicely */
+    overflow: auto; 
+    max-height: 500px; 
+}
+
+/* Notification styles */
+.notification {
+    display: none; /* Hidden by default */
+    position: fixed; /* Or absolute, depending on your layout */
+    bottom: 20px; /* Place it at the bottom */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
+    background-color: #4CAF50; /* Some visible color */
+    color: white; /* Text color */
+    padding: 10px; /* Some padding */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Some shadow for depth */
+    z-index: 1000; /* Make sure it's above other elements */
+}
+
+/* Class to make the notification visible */
+.notification.show {
+    display: block;
+}
+
+/* team member page */
+
+.profileIMG {
+  border-radius: 100%;
+}
+
+.teamProfileRow {
+  margin-bottom: 20px;
+}
+
+.gitHubPro > i {
+  font-size: 3.5em;
+  color: #ff3334;
 }
 
 /* Theme toggler */
