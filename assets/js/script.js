@@ -26,38 +26,38 @@ document.getElementById('generateButton').addEventListener('click', function() {
     const extraWords = document.getElementById('extraWords').value;
     const prompt = `Write a romantic love letter from ${fromName} to ${toName}. It MUST include ALL of the following words exactly as written, even if it makes the letter longer and less romantic: "${extraWords}".`;
 
-     const options = {
-         method: 'POST',
-         headers: {
-             accept: 'application/json',
-             'content-type': 'application/json',
-             'Authorization': 'Bearer hwdq6RgpdMxfXP2q7Oig0xmobkSo2pEZ' // Insert your AI21 API key here
-         },
-         body: JSON.stringify({
-             prompt: prompt,
-             numResults: 1,
-             maxTokens: 150, // Adjust based on your needs
-             temperature: 0.7,
-             topP: 1,
-             frequencyPenalty: {
-                 scale: 0,
-                 applyToWhitespaces: true,
-                 applyToPunctuations: true,
-                 applyToNumbers: true,
-                 applyToStopwords: true,
-                 applyToEmojis: true
-             },
-             presencePenalty: {
-                 scale: 0,
-                 applyToWhitespaces: true,
-                 applyToPunctuations: true,
-                 applyToNumbers: true,
-                 applyToStopwords: true,
-                 applyToEmojis: true
-             },
-             // You can adjust or remove penalties as needed for your specific use case
-         })
-     };
+    const options = {
+        method: 'POST',
+        headers: {
+            accept: 'application/json',
+            'content-type': 'application/json',
+            'Authorization': 'Bearer hwdq6RgpdMxfXP2q7Oig0xmobkSo2pEZ' // Insert your AI21 API key here
+        },
+        body: JSON.stringify({
+            prompt: prompt,
+            numResults: 1,
+            maxTokens: 150, // Adjust based on your needs
+            temperature: 0.7,
+            topP: 1,
+            frequencyPenalty: {
+                scale: 0,
+                applyToWhitespaces: true,
+                applyToPunctuations: true,
+                applyToNumbers: true,
+                applyToStopwords: true,
+                applyToEmojis: true
+            },
+            presencePenalty: {
+                scale: 0,
+                applyToWhitespaces: true,
+                applyToPunctuations: true,
+                applyToNumbers: true,
+                applyToStopwords: true,
+                applyToEmojis: true
+            },
+            // You can adjust or remove penalties as needed for your specific use case
+        })
+    };
 
     fetch('https://api.ai21.com/studio/v1/j2-mid/complete', options)
     .then(response => response.json())
@@ -78,12 +78,12 @@ document.getElementById('generateButton').addEventListener('click', function() {
     });
 });
 
- async function showHearts() {
-     // code to show hearts and handle disappear logic
-     document.getElementById("heart").classList.remove("hidden");
-     await new Promise((resolve) => setTimeout(resolve, 3000)); // Wait for 4 seconds
-     document.getElementById("heart").classList.add("hidden");
- }
+async function showHearts() {
+    // code to show hearts and handle disappear logic
+    document.getElementById("heart").classList.remove("hidden");
+    await new Promise((resolve) => setTimeout(resolve, 3000)); // Wait for 4 seconds
+    document.getElementById("heart").classList.add("hidden");
+}
 
 
 //Show notification function
@@ -115,16 +115,16 @@ document.getElementById('copyButton').addEventListener('click', function() {
 });
 
  //Sharing message on whatsapp
- function shareOnWhatsApp() {
-     var loveLetterText = document.getElementById('loveLetterOutput').innerText;
-     var whatsappUrl = "https://wa.me/?text=" + encodeURIComponent(loveLetterText);
-     window.open(whatsappUrl, '_blank');
- }
+function shareOnWhatsApp() {
+    var loveLetterText = document.getElementById('loveLetterOutput').innerText;
+    var whatsappUrl = "https://wa.me/?text=" + encodeURIComponent(loveLetterText);
+    window.open(whatsappUrl, '_blank');
+}
 
  // Dark mode toggle
- const body = document.querySelector('body');
- const toggle = document.querySelector('#toggle-btn');
- toggle.addEventListener('click', () => {
-     toggle.classList.toggle('dark');
-     body.classList.toggle('dark');
- });
+const body = document.querySelector('body');
+const toggle = document.querySelector('#toggle-btn');
+toggle.addEventListener('click', () => {
+    toggle.classList.toggle('dark');
+    body.classList.toggle('dark');
+});

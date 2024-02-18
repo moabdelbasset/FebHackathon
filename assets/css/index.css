@@ -397,10 +397,6 @@ footer.text-center.text-lg-start.text-white {
   color: var(--accent-color-dark) !important;
 }
 
-/* .theme-toggle-btn:hover {
-    color: var(--deep-carmine-pink);
-  } */
-
 body.dark {
   background-color: var(--dark-color) !important;
   color: var(--white-smoke) !important;
