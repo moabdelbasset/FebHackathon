@@ -64,6 +64,7 @@ footer {
 
 #generateButton {
   margin-top: 15px !important;
+  margin-bottom: 15px !important;
 }
 
 h1 {
@@ -91,7 +92,7 @@ body {
   }
 }
 
-.test {
+.heartsDiv {
   height: 100vh;
   width: 100vh;
   position: fixed;
@@ -122,6 +123,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 15px;
 }
 
 #iconsDiv > button {
@@ -269,16 +271,31 @@ footer.text-center.text-lg-start.text-white {
     width: 50px; /* Set the width as needed */
     height: 50px; /* Set the height as needed */
     cursor: pointer;
-    text-indent: -9999px; /* Hide the text */
 }
-
-#copyButton {
-  display: none; /* Initially hide the copy to clipboard icon */
-}
-
 
 .icon-button:hover {
     transform: scale(1.1); /* Slightly increase button size on hover */
+}
+
+#whatsapp-button:hover  {
+  transform: scale(1.1); /* Slightly increase button size on hover */
+}
+
+#whatsapp-button {
+  /* Initially hide the WhatsApp icon */
+  display: none; 
+  background: url('../icons/whatsapp.png') no-repeat center center;
+  background-size: contain;
+  border: none;
+  margin: 0 0 0 20px;
+  width: 50px; /* Set the width as needed */
+  height: 50px; /* Set the height as needed */
+  cursor: pointer;
+}
+
+#copyButton {
+  /* Initially hide the copy to clipboard icon */
+  display: none;
 }
 
 /* Styles for the love letter box */
@@ -295,18 +312,6 @@ footer.text-center.text-lg-start.text-white {
     overflow: auto; 
     max-height: 500px; 
 }
-
-#whatsapp-button {
-    display: none; /* Initially hide the WhatsApp icon */
-    background: url('../icons/whatsapp.png') no-repeat center center;
-    background-size: contain;
-    border: none;
-    width: 50px; /* Set the width as needed */
-    height: 50px; /* Set the height as needed */
-    cursor: pointer;
-    text-indent: -9999px; /* Hide the text */
-}
-
 
 /* Notification styles */
 .notification {
