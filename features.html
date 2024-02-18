@@ -46,7 +46,7 @@
 
 
 
-    <footer class="text-center text-lg-start text-white" style="background-color: #3e4551">
+    <footer class="text-center text-lg-start text-white">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
             <!-- Section: Links -->
@@ -54,47 +54,39 @@
                 <!--Grid row-->
                 <div class="row">
                     <!--Grid column-->
-                    <div class="col-lg-10 col-md-10 mb-10 mb-md-0">
-                        <h5 class="text-uppercase">Project name here</h5>
+                    <div class="col-lg-10 col-md-10 mb-10 mb-md-0 footerText">
+                        <h5 class="text-uppercase">Love Letter Genie</h5>
 
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestiae modi cum ipsam ad, illo possimus laborum ut
-                            reiciendis obcaecati. Ducimus, quas. Corrupti, pariatur eaque?
-                            Reiciendis assumenda iusto sapiente inventore animi?
+                            Welcome to our site Love Letter Genie
                         </p>
                     </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-
-                    </div>
-                    <!--Grid row-->
             </section>
-            <!-- Section: Links -->
 
+            <!-- Hidden div that contains an image of hearts that will appear if love letter function successfull -->
+            <div class="heartsDiv hidden" id="heart">
+                <img src="./assets/images/hearts.png" alt="hearts that appear for an animation" />
+            </div>
 
 
             <!-- Section: Social media -->
             <section class="mb-4 text-center">
 
                 <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://uk.linkedin.com/" role="button"><i
-                        class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://uk.linkedin.com/" role="button" aria-label="external lnik to Linkedin" target="_blank"><i
+                        class="fab fa-linkedin-in" ></i></a>
 
                 <!-- Github -->
                 <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/moabdelbasset/FebHackathon"
-                    role="button"><i class="fab fa-github"></i></a>
+                    role="button" aria-label="external link to github" target="_blank"><i class="fab fa-github"></i></a>
             </section>
             <!-- Section: Social media -->
         </div>
-        <!-- Grid container -->
 
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        <div class="text-center p-3 footerText">
             © Copyright:
-            <a class="text-white" href="https://github.com/moabdelbasset/FebHackathon">Team name here</a>
+            <a class="footerText" href="https://github.com/moabdelbasset/FebHackathon">Team name here</a>
         </div>
         <!-- Copyright -->
     </footer>
