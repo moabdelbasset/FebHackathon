@@ -244,6 +244,26 @@ footer.text-center.text-lg-start.text-white {
   width: 100%;
 }
 
+/* Refresh anchor */
+#refresh-anchor {
+  background: url('../icons/refresh.png') no-repeat center center; /* Add your refresh icon */
+  background-size: cover; /* Ensure the icon covers the button area */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+  margin-left: 10px; /* Space from other buttons */
+  border: none; /* Remove border if not needed */
+  cursor: pointer; /* Change cursor to pointer to indicate this is clickable */
+  display: none; /* Hide initially */
+}
+
+#refresh-anchor:hover {
+  transform: scale(1.1); /* Slightly increase button size on hover */
+}
+
+
 @media (min-width: 768px) {
     .title {
         display: flex ;
@@ -270,6 +290,10 @@ footer.text-center.text-lg-start.text-white {
   .col-md-6 {
     width: 60% !important;
   }
+
+  .gitHubPro > i {
+    font-size: 3.5vw; /* Slightly smaller */
+  }
 }
 
 @media (min-width: 576px) {
@@ -282,6 +306,16 @@ footer.text-center.text-lg-start.text-white {
   .title {
     font-size: 3rem !important;
     font-weight: 600 !important;
+  }
+
+  .gitHubPro > i {
+    font-size: 10vw; /* Even smaller */
+  }
+}
+
+@media (max-width: 400px) {
+  .gitHubPro > i {
+    font-size: 2em; /* Small size for very small screens */
   }
 }
 
@@ -365,9 +399,10 @@ footer.text-center.text-lg-start.text-white {
   margin-bottom: 20px;
 }
 
-.gitHubPro > i {
+#gitHubPro > i {
   font-size: 3.5em;
   color: #ff3334;
+  transition: font-size 0.3s ease; 
 }
 
 /* Theme toggler */
