@@ -1,58 +1,334 @@
-* {
-    font-family: "Poppins", sans-serif;
+:root {
+  /* Fonts */
+  --letter-font: "Montez", cursive;
+  --main-font: "Poppins", sans-serif;
+
+  /* Colors  */
+  --red: #c00000;
+  --deep-carmine-pink: #ff3334;
+  --brink-pink: #ff6f77;
+  --light-pink: #ffbbc1;
+  --mainly-red: #ffdee3;
+  --semi-pink: #ff8896;
+  --white-smoke: #f3f3f3;
+
+  /* Utilities */
+  --small-box-shadow: 1px -1px 7px 0 var(--brink-pink);
+  --border: 1px solid var(--light-pink);
 }
 
 .current {
-    border-bottom: 2px solid black !important;
-    padding-bottom: 2px !important;
+  border-bottom: 2px solid var(--deep-carmine-pink) !important;
+  padding-bottom: 2px !important;
 }
 
 a {
-    text-decoration: none !important;
+  text-decoration: none !important;
+  transition: color ease-in-out 0.3s !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:hover i {
+  color: var(--deep-carmine-pink);
+  transition: color ease-in-out 0.3s;
+}
+
+i {
+  color: var(--mainly-red);
+  font-size: 1.6rem;
+  padding: 7px;
+  vertical-align: middle;
+}
+
+i:hover,
+.active i {
+  cursor: pointer;
+  transition: color ease-in-out 0.3s;
+  color: var(--deep-carmine-pink);
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  background-image: url('/assets/images/wine-1543170_1280.jpg');
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
-    margin-top: auto;
+  margin-top: auto;
+  border-top: var(--border);
 }
 
 #generateButton {
-    margin-top: 15px !important;
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
 }
 
 h1 {
-    margin-top: 50px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  margin-top: 30px !important;
+  font-family:var(--letter-font);
+  color: var(--deep-carmine-pink) !important;
 }
 
 body {
-    position: relative;
+  position: relative;
 }
 
 @keyframes hearts {
-    0% {opacity: 0;}
-    50% {opacity: 1;}
-    100% {opacity: 0;}
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.test {
-    height: 100vh; 
-    width: 100vh;  
-    position: fixed; 
-    margin: 0; 
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 99;
-    animation-name: hearts;
-    animation-duration: 4s;
-    background-color: transparent;
-    display: block;
+.heartsDiv {
+  height: 100vh;
+  width: 100vh;
+  position: fixed;
+  margin: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  animation-name: hearts;
+  animation-duration: 3s;
+  background-color: transparent;
+  display: block;
 }
 
 .hidden {
-    display: none;
+  display: none;
+}
+
+#loveLetterOutput {
+  display: none; /* hidden when empty, JS changes it to flex */
+  margin: 30px 15px;
+  font-family: var(--letter-font);
+  font-weight: 600;
+  font-size: 1.3em;
+  color: var(--deep-carmine-pink);
+}
+
+#iconsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+#iconsDiv > button {
+  margin: 0px 50px;
+}
+
+/* Navbar section */
+nav.navbar.navbar-expand-lg.bg-body-tertiary {
+  background: var(--semi-pink) !important;
+  border: var(--border);
+  box-shadow: var(--small-box-shadow);
+}
+
+.navbar-nav .nav-link.show {
+  color: var(--mainly-red) !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show:hover {
+  color: var(--deep-carmine-pink) !important;
+}
+
+/* .navbar-expand-lg .navbar-collapse {
+  font-size: larger;
+} */
+
+a.nav-link {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: var(--mainly-red) !important;
+}
+
+/* Footer section  */
+footer.text-center.text-lg-start.text-white {
+  background: var(--semi-pink) !important;
+  border-top-color: var(--border);
+  box-shadow: var(--small-box-shadow);
+}
+
+.btn-outline-light {
+  color: var(--mainly-red) !important;
+  background: var(--mainly-red) !important;
+}
+
+.btn-outline-light i {
+  color: var(--semi-pink);
+}
+
+
+/* Generate Letter Button */
+#generateButton {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  margin-top: 10px;
+  color: var(--deep-carmine-pink) !important;
+  text-decoration: none;
+  box-shadow: var(--small-box-shadow);
+  text-transform: uppercase;
+  border: 2px solid var(--deep-carmine-pink) !important;
+  padding: 10px 20px 0 20px;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 1s, box-shadow 1s;
+  transition-delay: 0s, 1s;
+}
+
+#generateButton:hover {
+  cursor: pointer;
+  transition-delay: 0s, 1s;
+  color: var(--semi-pink);
+  box-shadow: 0 0 10px var(--red), 0 0 20px var(--red), 0 0 40px var(--red),
+    0 0 80px var(--red), 0 0 160px var(--red);
+}
+
+#generateButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 0;
+  height: 100%;
+  background-color: var(--red) !important;
+  transform: skewX(35deg);
+  z-index: -1;
+  transition: 1s;
+}
+
+#generateButton:hover:before {
+  width: 100%;
+}
+
+
+
+@media (min-width: 768px) {
+    .title {
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+    }
+    #loveLetterForm,
+    #loveLetterOutput {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #loveLetterForm {
+      display: flex;
+    }
+
+    #loveLetterOutput {
+        display: none; /* hidden when empty, JS changes it to flex */
+        margin: 0 auto;
+        padding: 30px 10px;
+    }
+
+  .col-md-6 {
+    width: 60% !important;
+  }
+}
+
+@media (min-width: 576px) {
+    #generateButton {
+        font-size: 1.5em;
+        letter-spacing: 0.1em !important;
+        margin-top: 20px !important;
+        padding: 10px 30px !important;
+      }
+    .title {
+        font-size: 3rem !important;
+        font-weight: 600 !important;
+    }
+}
+
+
+/* Custom Button Styles */
+.icon-button {
+    background: url('../icons/copy.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    width: 50px; /* Set the width as needed */
+    height: 50px; /* Set the height as needed */
+    cursor: pointer;
+}
+
+.icon-button:hover {
+    transform: scale(1.1); /* Slightly increase button size on hover */
+}
+
+#whatsapp-button:hover  {
+  transform: scale(1.1); /* Slightly increase button size on hover */
+}
+
+#whatsapp-button {
+  /* Initially hide the WhatsApp icon */
+  display: none; 
+  background: url('../icons/whatsapp.png') no-repeat center center;
+  background-size: contain;
+  border: none;
+  margin: 0 0 0 20px;
+  width: 50px; /* Set the width as needed */
+  height: 50px; /* Set the height as needed */
+  cursor: pointer;
+}
+
+#copyButton {
+  /* Initially hide the copy to clipboard icon */
+  display: none;
+}
+
+/* Styles for the love letter box */
+.love-letter-box {
+    border: 1px solid #ddd; /* Adds a light border */
+    padding: 20px; /* Adds some padding inside the box */
+    margin-top: 20px; /* Adds space between the form and the box */
+    border-radius: 10px; /* Rounds the corners */
+    background-color: #fefefe; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    min-height: 100px; /* Minimum height */
+    width: auto; /* Adjust width as needed, or use max-width */
+    word-wrap: break-word; /* Ensures the content wraps nicely */
+    overflow: auto; 
+    max-height: 500px; 
+}
+
+/* Notification styles */
+.notification {
+    display: none; /* Hidden by default */
+    position: fixed; /* Or absolute, depending on your layout */
+    bottom: 20px; /* Place it at the bottom */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
+    background-color: #4CAF50; /* Some visible color */
+    color: white; /* Text color */
+    padding: 10px; /* Some padding */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Some shadow for depth */
+    z-index: 1000; /* Make sure it's above other elements */
+}
+
+/* Class to make the notification visible */
+.notification.show {
+    display: block;
 }
