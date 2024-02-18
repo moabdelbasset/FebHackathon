@@ -11,11 +11,17 @@
   --mainly-red: #ffdee3;
   --semi-pink: #ff8896;
   --white-smoke: #f3f3f3;
+  --dark-color: #333;
+  --black-color: black;
+  --accent-color-dark: #d0d066;
+  --accent-color-light: orangered;
   --black: #000;
 
   /* Utilities */
   --small-box-shadow: 1px -1px 7px 0 var(--brink-pink);
   --border: 1px solid var(--light-pink);
+
+  --transition-delay: 1s;
 }
 
 .current {
@@ -56,6 +62,15 @@ body {
   display: flex;
   flex-direction: column;
 
+  /* Theme Toggle CSS for body  */
+
+  transition: var(--transition-delay) !important;
+  background-color: var(--white-smoke) !important;
+  color: var(--black-color) !important;
+  .theme-toggle-btn .icon {
+    fill: var(--accent-color-light) !important;
+  }
+
 }
 
 footer {
@@ -72,8 +87,11 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 30px !important;
-  font-family:var(--letter-font);
+  font-family: var(--letter-font);
   color: var(--deep-carmine-pink) !important;
 }
 
@@ -226,8 +244,6 @@ footer.text-center.text-lg-start.text-white {
   width: 100%;
 }
 
-
-
 @media (min-width: 768px) {
     .title {
         display: flex ;
@@ -257,18 +273,17 @@ footer.text-center.text-lg-start.text-white {
 }
 
 @media (min-width: 576px) {
-    #generateButton {
-        font-size: 1.5em;
-        letter-spacing: 0.1em !important;
-        margin-top: 20px !important;
-        padding: 10px 30px !important;
-      }
-    .title {
-        font-size: 3rem !important;
-        font-weight: 600 !important;
-    }
+  #generateButton {
+    font-size: 1.5em;
+    letter-spacing: 0.1em !important;
+    margin-top: 20px !important;
+    padding: 10px 30px !important;
+  }
+  .title {
+    font-size: 3rem !important;
+    font-weight: 600 !important;
+  }
 }
-
 
 /* Custom Button Styles */
 .icon-button {
@@ -281,7 +296,7 @@ footer.text-center.text-lg-start.text-white {
 }
 
 .icon-button:hover {
-    transform: scale(1.1); /* Slightly increase button size on hover */
+  transform: scale(1.1); /* Slightly increase button size on hover */
 }
 
 #whatsapp-button:hover  {
@@ -353,4 +368,43 @@ footer.text-center.text-lg-start.text-white {
 .gitHubPro > i {
   font-size: 3.5em;
   color: #ff3334;
+}
+
+/* Theme toggler */
+
+.theme-toggle-btn {
+  background-color: var(--accent-color);
+  color: var(--white-smoke);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  border: none;
+  outline: none;
+  transition: var(--transition-delay);
+  transform: scale(1);
+}
+
+.theme-toggle-btn .icon {
+  margin-right: 0.5em;
+  fill: var(--accent-color-dark);
+}
+
+.theme-toggle-btn .icon .dark {
+  color: var(--accent-color-dark) !important;
+}
+
+/* .theme-toggle-btn:hover {
+    color: var(--deep-carmine-pink);
+  } */
+
+body.dark {
+  background-color: var(--dark-color) !important;
+  color: var(--white-smoke) !important;
+  .theme-toggle-btn .icon {
+    fill: var(--accent-color-dark) !important;
+  }
 }
