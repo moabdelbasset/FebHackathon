@@ -126,7 +126,18 @@ body {
 #loveLetterOutput {
   font-family: var(--letter-font);
   font-weight: 600;
+  font-size: 1.3em;
   color: var(--deep-carmine-pink);
+}
+
+#iconsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#iconsDiv > button {
+  margin: 0px 50px;
 }
 
 /* Navbar section */

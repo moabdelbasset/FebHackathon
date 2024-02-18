@@ -16,6 +16,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <!-- Logo here -->
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Love Letter Genie</a>
             
@@ -50,6 +51,7 @@
         </div>
     </nav>
     <div class="container">
+        
         <h1 class="title"><i class="fas fa-heart"></i>Love Letter Generator<i class="fas fa-heart"></i></h1>
         <div class="row">
             <form id="loveLetterForm">
@@ -61,6 +63,10 @@
                     <label for="fromName" class="form-label">From:</label>
                     <input type="text" class="form-control" id="fromName" name="fromName" placeholder="Your Name" required>
                 </div>
+                <div class="col-sm-12 col-md-6">
+                    <label for="extraWords" class="form-label">Include the following word/s (optional):</label>
+                    <input type="text" class="form-control" id="extraWords" name="extraWords" placeholder="Additional Words">
+                </div>
                 <button type="button" class="btn col-sm-12 col-md-6" id="generateButton"><i class="fas fa-angle-double-right"></i>
                     Generate Love Letter
                 </button>
@@ -68,6 +74,13 @@
                 <div id="loveLetterOutput" class="love-letter-box"></div>
                 <button id="copyButton" class="btn icon-button"></button>
                 <button onclick="shareOnWhatsApp()" class="btn btn-outline-secondary" id="whatsapp-button"></button>
+                <!-- Notification -->
+                <!-- Place this somewhere appropriate in your HTML -->
+                <div id="notification" class="notification hidden">Love letter copied to clipboard!</div>
+                <div id="iconsDiv">
+                    <button id="copyButton" class="btn icon-button"></button>
+                    <button onclick="shareOnWhatsApp()" class="btn btn-outline-secondary" id="whatsapp-button"></button>
+                </div>
             </form>
         </div>
 
