@@ -122,15 +122,15 @@ document.getElementById('copyButton').addEventListener('click', function() {
      window.open(whatsappUrl, '_blank');
  }
 
- // Dark mode toggle
- const body = document.querySelector('body');
- const toggle = document.querySelector('#toggle-btn');
- toggle.addEventListener('click', () => {
-     toggle.classList.toggle('dark');
-     body.classList.toggle('dark');
- });
-
  // Refresh page
  function refreshPage() {
     window.location.reload();
 }
+
+//  // Dark mode toggle
+const body = document.querySelector('body');
+const toggle = document.querySelector('#toggle-btn');
+toggle.addEventListener('click', () => {
+    toggle.classList.toggle('dark');
+    body.classList.toggle('dark');
+});
