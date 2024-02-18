@@ -244,6 +244,26 @@ footer.text-center.text-lg-start.text-white {
   width: 100%;
 }
 
+/* Refresh anchor */
+#refresh-anchor {
+  background: url('../icons/refresh.png') no-repeat center center; /* Add your refresh icon */
+  background-size: cover; /* Ensure the icon covers the button area */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+  margin-left: 10px; /* Space from other buttons */
+  border: none; /* Remove border if not needed */
+  cursor: pointer; /* Change cursor to pointer to indicate this is clickable */
+  display: none; /* Hide initially */
+}
+
+#refresh-anchor:hover {
+  transform: scale(1.1); /* Slightly increase button size on hover */
+}
+
+
 @media (min-width: 768px) {
     .title {
         display: flex ;
