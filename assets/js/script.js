@@ -17,67 +17,79 @@ function printMessage(message) {
     }, 45); // ms pause between letters. 70: slow reading, 40 quick reading
 }
 
+ // Dark mode toggle
+const body = document.querySelector('body');
+const toggle = document.querySelector('#toggle-btn');
+toggle.addEventListener('click', () => {
+    toggle.classList.toggle('dark');
+    body.classList.toggle('dark');
+});
+
 // Define global variable, used in multiple places
 let interval;
 
-document.getElementById('generateButton').addEventListener('click', function() {
-    clearInterval(interval); // Clear existing interval
-    const toName = document.getElementById('toName').value;
-    const fromName = document.getElementById('fromName').value;
-    const extraWords = document.getElementById('extraWords').value;
-    const prompt = `Write a romantic love letter from ${fromName} to ${toName}. It MUST include ALL of the following words exactly as written, even if it makes the letter longer and less romantic: "${extraWords}".`;
+const genBTN = document.getElementById('generateButton')
 
-    const options = {
-        method: 'POST',
-        headers: {
-            accept: 'application/json',
-            'content-type': 'application/json',
-            'Authorization': 'Bearer hwdq6RgpdMxfXP2q7Oig0xmobkSo2pEZ' // Insert your AI21 API key here
-        },
-        body: JSON.stringify({
-            prompt: prompt,
-            numResults: 1,
-            maxTokens: 150, // Adjust based on your needs
-            temperature: 0.7,
-            topP: 1,
-            frequencyPenalty: {
-                scale: 0,
-                applyToWhitespaces: true,
-                applyToPunctuations: true,
-                applyToNumbers: true,
-                applyToStopwords: true,
-                applyToEmojis: true
+if (genBTN) {
+    genBTN.addEventListener('click', function() {
+        clearInterval(interval); // Clear existing interval
+        const toName = document.getElementById('toName').value;
+        const fromName = document.getElementById('fromName').value;
+        const extraWords = document.getElementById('extraWords').value;
+        const prompt = `Write a romantic love letter from ${fromName} to ${toName}. It MUST include ALL of the following words exactly as written, even if it makes the letter longer and less romantic: "${extraWords}".`;
+    
+        const options = {
+            method: 'POST',
+            headers: {
+                accept: 'application/json',
+                'content-type': 'application/json',
+                'Authorization': 'Bearer hwdq6RgpdMxfXP2q7Oig0xmobkSo2pEZ' // Insert your AI21 API key here
             },
-            presencePenalty: {
-                scale: 0,
-                applyToWhitespaces: true,
-                applyToPunctuations: true,
-                applyToNumbers: true,
-                applyToStopwords: true,
-                applyToEmojis: true
-            },
-            // You can adjust or remove penalties as needed for your specific use case
+            body: JSON.stringify({
+                prompt: prompt,
+                numResults: 1,
+                maxTokens: 150, // Adjust based on your needs
+                temperature: 0.7,
+                topP: 1,
+                frequencyPenalty: {
+                    scale: 0,
+                    applyToWhitespaces: true,
+                    applyToPunctuations: true,
+                    applyToNumbers: true,
+                    applyToStopwords: true,
+                    applyToEmojis: true
+                },
+                presencePenalty: {
+                    scale: 0,
+                    applyToWhitespaces: true,
+                    applyToPunctuations: true,
+                    applyToNumbers: true,
+                    applyToStopwords: true,
+                    applyToEmojis: true
+                },
+                // You can adjust or remove penalties as needed for your specific use case
+            })
+        };
+    
+        fetch('https://api.ai21.com/studio/v1/j2-mid/complete', options)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            // Adjust how you access the generated text based on AI21's response structure
+            if (data.completions && data.completions.length > 0) {
+                showHearts();
+                const generatedMessage = data.completions[0].data.text;
+                printMessage(generatedMessage); // Call printMessage with the generated message
+            } else {
+                document.getElementById('loveLetterOutput').textContent = 'Failed to generate love letter. Please try again.';
+            }
         })
-    };
-
-    fetch('https://api.ai21.com/studio/v1/j2-mid/complete', options)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        // Adjust how you access the generated text based on AI21's response structure
-        if (data.completions && data.completions.length > 0) {
-            showHearts();
-            const generatedMessage = data.completions[0].data.text;
-            printMessage(generatedMessage); // Call printMessage with the generated message
-        } else {
+        .catch(error => {
+            console.error('Error:', error);
             document.getElementById('loveLetterOutput').textContent = 'Failed to generate love letter. Please try again.';
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        document.getElementById('loveLetterOutput').textContent = 'Failed to generate love letter. Please try again.';
+        });
     });
-});
+}
 
 async function showHearts() {
     // code to show hearts and handle disappear logic
@@ -99,9 +111,11 @@ function showNotification(message, duration = 4000) {
     }, duration);
 }
 
+const cpyBTN = document.getElementById('copyButton')
 
-// Listen for clicks on the copy button
-document.getElementById('copyButton').addEventListener('click', function() {
+if (cpyBTN) {
+    // Listen for clicks on the copy button
+cpyBTN.addEventListener('click', function() {
     event.preventDefault();
     // Get the text you want to copy
     const textToCopy = document.getElementById('loveLetterOutput').innerText;
@@ -114,6 +128,7 @@ document.getElementById('copyButton').addEventListener('click', function() {
         console.error('Error copying text: ', err);
     });
 });
+}
 
  //Sharing message on whatsapp
 function shareOnWhatsApp() {
@@ -122,15 +137,7 @@ function shareOnWhatsApp() {
     window.open(whatsappUrl, '_blank');
 }
 
- // Dark mode toggle
- const body = document.querySelector('body');
- const toggle = document.querySelector('#toggle-btn');
- toggle.addEventListener('click', () => {
-     toggle.classList.toggle('dark');
-     body.classList.toggle('dark');
- });
-
  // Refresh page
- function refreshPage() {
+function refreshPage() {
     window.location.reload();
 }
