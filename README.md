@@ -76,6 +76,17 @@ This is joint project for the February 2024 Hackathon with Code Institute. Below
 
 ## Design \& Development
 
+### Typography
+
+### Imagery
+
+### Colour Scheme
+
+![Love Letter Genie Website Colour Palette](documenatation/love-letter-genie.png)
+
+This colour palette reflects the romantic theme of the website. They are generally soft, with some bolder colours to accent the page and make the words of importance stand out.
+
+
 ### 5 Planes of UX
 
 #### Strategy
@@ -99,6 +110,7 @@ See [Wireframes](#wireframes) below.
 #### Surface
 
 A simple, two toned colour scheme is used throughout, to avoid distracting the user's focus from the game area. All clickable buttons and icons will highlight when hovered over, in order to show where the user can and cannot click. Icons will show frames to represent results: green symbolising a win, red symbolising a loss and grey symbolising a draw.
+
 
 ### Wireframes
 
