@@ -51,7 +51,8 @@ i:hover,
 }
 
 body {
-  min-height: 100vh;
+  background-image: url('/assets/images/wine-1543170_1280.jpg');
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
