@@ -11,10 +11,16 @@
   --mainly-red: #ffdee3;
   --semi-pink: #ff8896;
   --white-smoke: #f3f3f3;
+  --dark-color: #333;
+  --black-color: black;
+  --accent-color-dark: #d0d066;
+  --accent-color-light: orangered;
 
   /* Utilities */
   --small-box-shadow: 1px -1px 7px 0 var(--brink-pink);
   --border: 1px solid var(--light-pink);
+
+  --transition-delay: 1s;
 }
 
 .current {
@@ -54,6 +60,15 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  /* Theme Toggle CSS for body  */
+
+  transition: var(--transition-delay) !important;
+  background-color: var(--white-smoke) !important;
+  color: var(--black-color) !important;
+  .theme-toggle-btn .icon {
+    fill: var(--accent-color-light) !important;
+  }
 }
 
 footer {
@@ -66,11 +81,11 @@ footer {
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 30px !important;
-  font-family:var(--letter-font);
+  font-family: var(--letter-font);
   color: var(--deep-carmine-pink) !important;
 }
 
@@ -109,7 +124,6 @@ body {
 }
 
 #loveLetterOutput {
-  margin: 30px 15px;
   font-family: var(--letter-font);
   font-weight: 600;
   color: var(--deep-carmine-pink);
@@ -158,7 +172,6 @@ footer.text-center.text-lg-start.text-white {
   color: var(--semi-pink);
 }
 
-
 /* Generate Letter Button */
 #generateButton {
   position: relative;
@@ -204,26 +217,23 @@ footer.text-center.text-lg-start.text-white {
   width: 100%;
 }
 
-
-
 @media (min-width: 768px) {
-    .title {
-        display: flex ;
-        justify-content: center;
-        align-items: center;
-    }
-    #loveLetterForm,
-    #loveLetterOutput {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #loveLetterForm,
+  #loveLetterOutput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    #loveLetterOutput {
-        margin: 0 auto;
-        padding: 30px 10px;
-    }
+  #loveLetterOutput {
+    padding: 30px 10px;
+  }
 
   .col-md-6 {
     width: 60% !important;
@@ -231,54 +241,91 @@ footer.text-center.text-lg-start.text-white {
 }
 
 @media (min-width: 576px) {
-    #generateButton {
-        font-size: 1.5em;
-        letter-spacing: 0.1em !important;
-        margin-top: 20px !important;
-        padding: 10px 30px !important;
-      }
-    .title {
-        font-size: 3rem !important;
-        font-weight: 600 !important;
-    }
+  #generateButton {
+    font-size: 1.5em;
+    letter-spacing: 0.1em !important;
+    margin-top: 20px !important;
+    padding: 10px 30px !important;
+  }
+  .title {
+    font-size: 3rem !important;
+    font-weight: 600 !important;
+  }
 }
-
 
 /* Custom Button Styles */
 .icon-button {
-    background: url('../icons/copy.png') no-repeat center center;
-    background-size: contain;
-    border: none;
-    width: 50px; /* Set the width as needed */
-    height: 50px; /* Set the height as needed */
-    cursor: pointer;
-    text-indent: -9999px; /* Hide the text */
+  background: url("../icons/copy.png") no-repeat center center;
+  background-size: contain;
+  border: none;
+  width: 50px; /* Set the width as needed */
+  height: 50px; /* Set the height as needed */
+  cursor: pointer;
+  text-indent: -9999px; /* Hide the text */
 }
 
-
 .icon-button:hover {
-    transform: scale(1.1); /* Slightly increase button size on hover */
+  transform: scale(1.1); /* Slightly increase button size on hover */
 }
 
 /* Styles for the love letter box */
 .love-letter-box {
-    border: 1px solid #ddd; /* Adds a light border */
-    padding: 20px; /* Adds some padding inside the box */
-    margin-top: 20px; /* Adds space between the form and the box */
-    border-radius: 10px; /* Rounds the corners */
-    background-color: #fefefe; /* Light background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    min-height: 100px; /* Minimum height */
-    width: auto; /* Adjust width as needed, or use max-width */
-    word-wrap: break-word; /* Ensures the content wraps nicely */
+  border: 1px solid #ddd; /* Adds a light border */
+  padding: 20px; /* Adds some padding inside the box */
+  margin-top: 20px; /* Adds space between the form and the box */
+  border-radius: 10px; /* Rounds the corners */
+  background-color: #fefefe; /* Light background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  min-height: 100px; /* Minimum height */
+  width: auto; /* Adjust width as needed, or use max-width */
+  word-wrap: break-word; /* Ensures the content wraps nicely */
 }
 
 #whatsapp-button {
-    background: url('../icons/whatsapp.png') no-repeat center center;
-    background-size: contain;
-    border: none;
-    width: 50px; /* Set the width as needed */
-    height: 50px; /* Set the height as needed */
-    cursor: pointer;
-    text-indent: -9999px; /* Hide the text */
+  background: url("../icons/whatsapp.png") no-repeat center center;
+  background-size: contain;
+  border: none;
+  width: 50px; /* Set the width as needed */
+  height: 50px; /* Set the height as needed */
+  cursor: pointer;
+  text-indent: -9999px; /* Hide the text */
+}
+
+/* Theme toggler */
+
+.theme-toggle-btn {
+  background-color: var(--accent-color);
+  color: var(--white-smoke);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  border: none;
+  outline: none;
+  transition: var(--transition-delay);
+  transform: scale(1);
+}
+
+.theme-toggle-btn .icon {
+  margin-right: 0.5em;
+  fill: var(--accent-color-dark);
+}
+
+.theme-toggle-btn .icon .dark {
+  color: var(--accent-color-dark) !important;
+}
+
+/* .theme-toggle-btn:hover {
+    color: var(--deep-carmine-pink);
+  } */
+
+body.dark {
+  background-color: var(--dark-color) !important;
+  color: var(--white-smoke) !important;
+  .theme-toggle-btn .icon {
+    fill: var(--accent-color-dark) !important;
+  }
 }
