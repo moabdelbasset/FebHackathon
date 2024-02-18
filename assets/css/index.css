@@ -51,7 +51,8 @@ i:hover,
 }
 
 body {
-  min-height: 100vh;
+  background-image: url('/assets/images/wine-1543170_1280.jpg');
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -109,10 +110,22 @@ body {
 }
 
 #loveLetterOutput {
+  display: none; /* hidden when empty, JS changes it to flex */
   margin: 30px 15px;
   font-family: var(--letter-font);
   font-weight: 600;
+  font-size: 1.3em;
   color: var(--deep-carmine-pink);
+}
+
+#iconsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#iconsDiv > button {
+  margin: 0px 50px;
 }
 
 /* Navbar section */
@@ -214,13 +227,17 @@ footer.text-center.text-lg-start.text-white {
     }
     #loveLetterForm,
     #loveLetterOutput {
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
+    #loveLetterForm {
+      display: flex;
+    }
+
     #loveLetterOutput {
+        display: none; /* hidden when empty, JS changes it to flex */
         margin: 0 auto;
         padding: 30px 10px;
     }
@@ -241,4 +258,72 @@ footer.text-center.text-lg-start.text-white {
         font-size: 3rem !important;
         font-weight: 600 !important;
     }
+}
+
+
+/* Custom Button Styles */
+.icon-button {
+    background: url('../icons/copy.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    width: 50px; /* Set the width as needed */
+    height: 50px; /* Set the height as needed */
+    cursor: pointer;
+    text-indent: -9999px; /* Hide the text */
+}
+
+#copyButton {
+  display: none; /* Initially hide the copy to clipboard icon */
+}
+
+
+.icon-button:hover {
+    transform: scale(1.1); /* Slightly increase button size on hover */
+}
+
+/* Styles for the love letter box */
+.love-letter-box {
+    border: 1px solid #ddd; /* Adds a light border */
+    padding: 20px; /* Adds some padding inside the box */
+    margin-top: 20px; /* Adds space between the form and the box */
+    border-radius: 10px; /* Rounds the corners */
+    background-color: #fefefe; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    min-height: 100px; /* Minimum height */
+    width: auto; /* Adjust width as needed, or use max-width */
+    word-wrap: break-word; /* Ensures the content wraps nicely */
+    overflow: auto; 
+    max-height: 500px; 
+}
+
+#whatsapp-button {
+    display: none; /* Initially hide the WhatsApp icon */
+    background: url('../icons/whatsapp.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    width: 50px; /* Set the width as needed */
+    height: 50px; /* Set the height as needed */
+    cursor: pointer;
+    text-indent: -9999px; /* Hide the text */
+}
+
+
+/* Notification styles */
+.notification {
+    display: none; /* Hidden by default */
+    position: fixed; /* Or absolute, depending on your layout */
+    bottom: 20px; /* Place it at the bottom */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
+    background-color: #4CAF50; /* Some visible color */
+    color: white; /* Text color */
+    padding: 10px; /* Some padding */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Some shadow for depth */
+    z-index: 1000; /* Make sure it's above other elements */
+}
+
+/* Class to make the notification visible */
+.notification.show {
+    display: block;
 }
