@@ -239,17 +239,22 @@ WAVE revealed no errors and no contrast errors. As this needed to be tested thro
 
 No major warnings of concern were displayed when put through JSHint. 
 
-![JSHint 1 of 3](/documentation/testing/jshint-love-letter-genie-1.PNG)
-![JSHint 2 of 3](/documentation/testing/jshint-love-letter-genie-2.PNG)
-![JSHint 3 of 3](/documentation/testing/jshint-love-letter-genie-3.PNG)
+![JSHint 1 of 3](/documentation/testing/jshint/jshint-love-letter-genie-1.PNG)
+![JSHint 2 of 3](/documentation/testing/jshint/jshint-love-letter-genie-2.PNG)
+![JSHint 3 of 3](/documentation/testing/jshint/jshint-love-letter-genie-3.PNG)
 
 ### HTML Code Validation
 
 Any issues that remain are struture-optimisation related. This can be re-formatted in future versions.
 
+#### Home Page
 ![W3C HTML Home Page](/documentation/testing/w3c-validator/w3c-html-validator-homepage.PNG)
-![W3C HTML Gift Page](/documentation/testing/w3c-validator/w3c-html-validator-gift-shop.PNG)
-![W3C HTML Team Members](/documentation/testing/w3c-validator/w3c-html-validator-team-members.PNG)
+
+#### Gift Shop Page
+![W3C HTML Gift Shop Page](/documentation/testing/w3c-validator/w3c-html-validator-gift-shop.PNG)
+
+#### Team Members Page
+![W3C HTML Team Members Page](/documentation/testing/w3c-validator/w3c-html-validator-team-members.PNG)
 
 ### CSS Code Validation
 
