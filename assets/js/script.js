@@ -25,7 +25,7 @@ document.getElementById('generateButton').addEventListener('click', function () 
     const toName = document.getElementById('toName').value;
     const fromName = document.getElementById('fromName').value;
     const extraWords = document.getElementById('extraWords').value;
-    const prompt = `Write a romantic love letter from ${fromName} to ${toName}. It MUST include ALL of the following words exactly as written, even if it makes the letter longer and less romantic: "${extraWords}".`;
+    const prompt = `Write a romantic love letter from ${fromName} to ${toName}. The love letter MUST include ALL of the following words: "${extraWords}".`;
 
     const options = {
         method: 'POST',
@@ -37,7 +37,7 @@ document.getElementById('generateButton').addEventListener('click', function () 
         body: JSON.stringify({
             prompt: prompt,
             numResults: 1,
-            maxTokens: 150, // Adjust based on your needs
+            maxTokens: 250, // Adjust based on your needs
             temperature: 0.7,
             topP: 1,
             frequencyPenalty: {
@@ -127,7 +127,6 @@ function refreshPage() {
     window.location.reload();
 }
 
-// Restricting input to alphabets only
 const alphabeticInputs = document.querySelectorAll('.form-control');
 
 alphabeticInputs.forEach((input) => {
@@ -135,8 +134,8 @@ alphabeticInputs.forEach((input) => {
         // Get the entered value
         const enteredValue = event.target.value;
 
-        // Replace any characters that are not alphabets with an empty string
-        const sanitizedValue = enteredValue.replace(/[^a-zA-Z]/g, '');
+        // Replace any characters that are not alphabets or punctuation with an empty string
+        const sanitizedValue = enteredValue.replace(/[^a-zA-Z.,!?;:'"\s]/g, '');
 
         // Update the input field value with the sanitized value
         event.target.value = sanitizedValue;

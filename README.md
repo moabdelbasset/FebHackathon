@@ -1,4 +1,4 @@
-# PROJECT TITLE - Hackathon - February 2024<!-- omit from toc -->
+# Love Letter Genie - Hackathon - February 2024<!-- omit from toc -->
 
 This project is a website where users can generate a love letter to their loved one. They can use the additional features to copy this message directly to their clipboard, or send directly to their loved one via WhatsApp.
 
@@ -32,8 +32,6 @@ This is joint project for the February 2024 Hackathon with Code Institute. Below
 - [Technology \& Resources](#technology--resources)
 - [Deployment](#deployment)
 - [Issues/Bugs](#issuesbugs)
-  - [Resolved](#resolved)
-  - [Unresolved](#unresolved)
 - [Testing \& Validation](#testing--validation)
   - [Functional Testing of Website](#functional-testing-of-website)
     - [Home Page](#home-page-1)
@@ -158,6 +156,10 @@ Once the basic design of the website was finished, we deployed it to GitHub Page
 3. Click *HTTPS* and copy the URL.
 4. Open your IDE, and open a terminal.
 5. Type `git clone URL`, replacing `URL` with the URL copied in step 3.
+
+## Issues/Bugs
+
+- If there are a large number of 'un-romantic' words given in the prompt, the message generator will simply ignore them, as it deems it impossible to create a love letter including those words. By going into more depth with the prompt, and researching more about how the AI constructs its sentences, we could avoid this in the future. However, for the short time scale that we have for this product, this is beyond a reasonable workload.
 
 ## Testing \& Validation
 
