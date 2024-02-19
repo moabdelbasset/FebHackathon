@@ -237,10 +237,11 @@ WAVE revealed no errors and no contrast errors. As this needed to be tested thro
 
 ### JSHint
 
-No major warnings of concern were 
-![jsHint pg.1](/documentation/testing/jshint-love-letter-genie-1.PNG)
-![jsHint pg.2](/documentation/testing/jshint-love-letter-genie-2.PNG)
-![jsHint pg.3](/documentation/testing/jshint-love-letter-genie-3.PNG)
+No major warnings of concern were displayed when put through JSHint. 
+
+![JSHint pg.1](/documentation/testing/jshint-love-letter-genie-1.PNG)
+![JSHint pg.2](/documentation/testing/jshint-love-letter-genie-2.PNG)
+![JSHint pg.3](/documentation/testing/jshint-love-letter-genie-3.PNG)
 
 ### HTML Code Validation
 
