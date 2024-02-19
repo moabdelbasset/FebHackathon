@@ -147,7 +147,7 @@ Icons allowing the user to share their created message by either copying to thei
 - **Template :** The [CodeInstitute Gitpod template](https://github.com/Code-Institute-Org/gitpod-full-template) was used in order to install all the relevant tools for the code to function.
 - [Github](https://github.com/) was used to host the project. Each author worked on their own self-titled branch before committing changes - after group approval - to the main branch.
 - [Balsamiq](https://balsamiq.com/) was used to create wireframes for mobile, tablet and desktop.
-- [Favicon.io](https://favicon.io/favicon-generator/) was used to find the page's favicon ???
+- [Favicon.io](https://favicon.io/favicon-generator/) was used to find the page's favicon.
 - [WAVE](https://wave.webaim.org/) and [PageSpeed Insights](https://pagespeed.web.dev/) testing tools were used to locate minor issues and check both accessibility and performance. 
 
 ## Deployment
