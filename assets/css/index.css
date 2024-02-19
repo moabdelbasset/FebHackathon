@@ -295,6 +295,13 @@ footer.text-center.text-lg-start.text-white {
   .gitHubPro > i {
     font-size: 3.5vw; /* Slightly smaller */
   }
+
+  .teamName {
+    font-size: 3.5vw;
+  }
+  #teamName {
+    font-size: 3.5vw;
+  }
 }
 
 @media (min-width: 576px) {
@@ -312,12 +319,14 @@ footer.text-center.text-lg-start.text-white {
   .gitHubPro > i {
     font-size: 10vw; /* Even smaller */
   }
+
 }
 
 @media (max-width: 400px) {
   .gitHubPro > i {
     font-size: 2em; /* Small size for very small screens */
   }
+
 }
 
 /* Custom Button Styles */
