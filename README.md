@@ -217,7 +217,23 @@ WAVE revealed no errors and no contrast errors. As this needed to be tested thro
 
 ### PageSpeed Insight Tests
 
-NEEDS TO BE DONE (all 3 pages)
+#### Home Page
+
+[Home - PageSpeed Test](https://pagespeed.web.dev/analysis/https-moabdelbasset-github-io-FebHackathon-index-html/de34mlu363?form_factor=desktop)
+
+![Home PageSpeed Test](/assets/images/readme-images/home-page-test.png)
+
+#### Gift Shop Page
+
+[Gift Shop - PageSpeed Test](https://pagespeed.web.dev/analysis/https-moabdelbasset-github-io-FebHackathon-gift-html/u49ammank0?form_factor=desktop)
+
+![Gift Shop PageSpeed Test](/assets/images/readme-images/gift-shop-test.png)
+
+#### Team Members Page
+
+[Team Members - PageSpeed Test](https://pagespeed.web.dev/analysis/https-moabdelbasset-github-io-FebHackathon-team-html/bqynegfncl?form_factor=desktop)
+
+![Team Members PageSpeed Test](/assets/images/readme-images/team-members-test.png)
 
 ### JSHint
 
