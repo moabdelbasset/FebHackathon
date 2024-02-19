@@ -245,12 +245,17 @@ No major warnings of concern were displayed when put through JSHint.
 
 ### HTML Code Validation
 
+Any issues that remain are struture-optimisation related. This can be re-formatted in future versions.
+
 ![W3C HTML Home Page](/documentation/testing/w3c-validator/w3c-html-validator-homepage.PNG)
 ![W3C HTML Gift Page](/documentation/testing/w3c-validator/w3c-html-validator-gift-shop.PNG)
+![W3C HTML Team Members](/documentation/testing/w3c-validator/w3c-html-validator-team-members.PNG)
 
 ### CSS Code Validation
 
-NEEDS TO BE DONE
+The validation of the CSS contained mostly parsing issues.
+
+![W3C CSS](/documentation/testing/w3c-validator/w3c-css-validator.PNG)
 
 ## Future Improvements/Development
 
