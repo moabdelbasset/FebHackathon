@@ -43,16 +43,16 @@ This is joint project for the February 2024 Hackathon with Code Institute. Below
 - [Future Improvements/Development](#future-improvementsdevelopment)
 - [Acknowledgments](#acknowledgments)
 
-## Website Objectives
+## Website Objective
 
 - Help users to create a personalised romantic letter to their loved one.
 - Make it easy to share said letter, even for those not comfortaale/familiar with features such as copy and paste.
-- ???Show the user links to websites where they can buy romantic gifts for their loved ones, including mugs/cards with their romantic message printed on???.
+- Show the user links to websites where they can buy romantic gifts for their loved ones.
 
 ## Potential Users
 
-- People who want a romantic gesture for their loved one.
-- Those who struggle to write/create elaborate, well structured sentances.
+- People who want to create a personalised romantic gesture for their loved one.
+- Those who feel they lack the creativity to express their feelings for their loved one adequately.
 
 ## Design \& Development
 
@@ -98,31 +98,43 @@ This colour palette reflects the romantic theme of the website. They are general
 
 A soft, clean home page, where the goal/function of the site is obvious and apparent.
 
-??? SCREENSHOT OF HOME PAGE ???
+![Home Page Screenshot](/assets/images/readme-images/homepage.png)
+
+Header, showing the user which page they are currently on, as well as the other page on the site.
+
+![Header](/assets/images/readme-images/header.png)
+
+Option to switch the colour scheme to dark mode, to better suit those whose computer is in dark mode.
+
+![Dark Mode](/assets/images/readme-images/dark2.png)
+
+Adaptive design, adjusting the layout and design to better fit the available real estate.
+
+![Mobile View](/assets/images/readme-images/mobile-view.png)
 
 Clear prompts to the user, and easy to understand instructions/buttons
 
-??? EXAMPLE OF FILLED IN INFORMATION ???
+![Input Filled](/assets/images/readme-images/input-example.png)
 
 Hearts fill the screen, informing the user that their letter is about to be created.
 
-??? HEART SCREEN ???
+![Heart filled screen](/assets/images/readme-images/hearts-appear.png)
 
-A personalised message appears, as if being written in real time, in a handwriting-style font
+A personalised message appears, as if being written in real time, in a handwriting-style font.
 
-??? EXAMPLE OF NOTE BEING WRITTEN OUT ???
+![Message example](/assets/images/readme-images/message-example.png)
 
 Icons allowing the user to share their created message by either copying to their clipboard, or sharing directly via WhatsApp 
 
-??? CLOSE UP OF ICONS ???
+![Icons](/assets/images/readme-images/icons.png)
 
-??? IF INCLUDED *Gifts* page, including links to gift websites where the user can pair their romantic letter with a gift, including ones adorning their custom message. ???
+*Gifts* page, including links to gift websites where the user can pair their romantic letter with a gift, including ones adorning their custom message.
 
-??? SCREENSHOT OF GIFTS PAGE ???
+![Gifts Page](/assets/images/readme-images/gifts.png)
 
 *Team Members* page, giving the user the option to contact the authors, and/or see their other work 
 
-??? SCREENSHOT OF TEAM MEMBERS PAGE ???
+![Team Members Page](/assets/images/readme-images/team.png)
 
 ## Technology \& Resources
 
@@ -165,9 +177,39 @@ Once the basic design of the website was finished, we deployed it to GitHub Page
 
 ### Functional Testing of Website
 
+#### Header
+
+|Test Item|Test Carried Out|Result|Pass/Fail|
+|-------------|------------------|-----------|-------|
+|Logo|Click on logo|Home Page reloads|PASS|
+|Home icon|Click on Home icon|Home Page reloads|PASS|
+|Gift Shop Icon|Click on Gift Shop Icon|Gift Shop page loads|PASS|
+|Theme Mode|Click on Theme Mode icon|View toggles between light mode and dark mode|PASS|
+|Hamburger icon **(Mobile only)**|Click on Hamburger icon|Header options are revealed|PASS|
+
+#### Footer
+
+|Test Item|Test Carried Out|Result|Pass/Fail|
+|-------------|------------------|-----------|-------|
+|GitHub icon|Click on GitHub icon|GitHub repo page for website loads|PASS|
+
 #### Home Page
 
+|Test Item|Test Carried Out|Result|Pass/Fail|
+|-------------|------------------|-----------|-------|
+|Love Letter Generator|*Name A* written in 'To:' field. *Name B* written in 'From:' field. *Word 1, Word 2, Word 3* written in *Additional* field. Click on *Generate Love Letter*|Love letter is generated. Letter is to *Name A*, from *Name B*. The letter inclues *Word A*, *Word B* and *Word C*|PASS|
+
+#### Gift Shop Page
+
+|Test Item|Test Carried Out|Result|Pass/Fail|
+|-------------|------------------|-----------|-------|
+|Links to external sites|Click on links to external site|Corresponding website opens in new tab|PASS|
+
 #### Team Members Page
+
+|Test Item|Test Carried Out|Result|Pass/Fail|
+|-------------|------------------|-----------|-------|
+|GitHub links|Click on GitHub logo under name and image of author|Corresponding GitHub profile opens in new tab|PASS|
 
 ### WAVE Evaluation Tool
 
@@ -175,17 +217,22 @@ WAVE revealed no errors and no contrast errors. As this needed to be tested thro
 
 ### PageSpeed Insight Tests
 
+NEEDS TO BE DONE (all 3 pages)
+
 ### JSHint
 
-JSHint returned no errors, (((only ____ warnings about functions being contained within other functions. This is deemed acceptable for this project and so does not need addressing))).
+NEEDS TO BE DONE
 
 ### HTML Code Validation
 
+NEEDS TO BE DONE (all 3 pages)
+
 ### CSS Code Validation
+
+NEEDS TO BE DONE
 
 ## Future Improvements/Development
 
-- ???Include links to external sites where gifts can be bought, including the generated text??? MIGHT BE INCLUDED; CHECK BEFORE SUBMISSION.
 - Expand on the WhatsApp feature, by adding options to share via Messenger, Facebook, Twitter, Instagram.
 - Add a feature where the user can generate a link, which when opened, is a blank page (possibly styled to look like paper) so they can read the message as it is generated, like on the main page. This way, the recipent can enjoy the handwritten effect feature, as well as the user.
 - Add another animated feature to the text generation, so that it appears that a hand is writing the generated text.
