@@ -90,6 +90,9 @@ This colour palette reflects the romantic theme of the website. They are general
 
 ![Home Page Wireframe](/documentation/wireframes/home_letter_generator_wireframe.png)
 
+#### Gift Shop Page
+![Gift Shop Page](/documentation/wireframes/gift_shop_letter_generator_wireframe.png)
+
 #### Team Members Page
 
 ![Team Members Page Wireframe](/documentation/wireframes/team_members_letter_generator_wireframe%20copy.png)
