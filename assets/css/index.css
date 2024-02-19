@@ -453,3 +453,50 @@ body.dark {
     fill: var(--accent-color-dark) !important;
   }
 }
+
+
+/* Style for h2 with class .teamName */
+.teamName {
+  /* Default font size for larger screens */
+  font-size: 1.6em;
+}
+
+/* Style for h2 with ID #teamName */
+#teamName {
+  /* Default font size for larger screens */
+  font-size: 1.6em;
+}
+
+
+@media (max-width: 1024px) {
+  .teamName,
+  #teamName {
+    /* Slightly smaller font size for smaller screens */
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 768px) {
+  .teamName,
+  #teamName {
+    /* Even smaller font size for tablet screens */
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 576px) {
+  .teamName,
+  #teamName {
+    /* Small font size for mobile screens */
+    font-size: 1em;
+  }
+}
+
+
+@media (max-width: 250px) {
+  .teamName,
+  #teamName {
+    /* Small font size for mobile screens */
+    font-size: 0.5em;
+  }
+}
