@@ -142,7 +142,7 @@ Icons allowing the user to share their created message by either copying to thei
 - **Languages :** HTML for basic page structure. Bootstrap and CSS for styling. JavaScript for interactivity. Markdown for this readme.
 - **Template :** The [CodeInstitute Gitpod template](https://github.com/Code-Institute-Org/gitpod-full-template) was used in order to install all the relevant tools for the code to function.
 - [Github](https://github.com/) was used to host the project. Each author worked on their own self-titled branch before committing changes - after group approval - to the main branch.
-- [Balsamiq](https://balsamiq.com/) was used to create wireframes for mobile, tablet and desktop ???
+- [Balsamiq](https://balsamiq.com/) was used to create wireframes for mobile, tablet and desktop.
 - [Favicon.io](https://favicon.io/favicon-generator/) was used to find the page's favicon ???
 - [WAVE](https://wave.webaim.org/) and [PageSpeed Insights](https://pagespeed.web.dev/) testing tools were used to locate minor issues and check both accessibility and performance. 
 
@@ -237,7 +237,10 @@ WAVE revealed no errors and no contrast errors. As this needed to be tested thro
 
 ### JSHint
 
-NEEDS TO BE DONE
+No major warnings of concern were 
+![jsHint pg.1](/documentation/testing/jshint-love-letter-genie-1.PNG)
+![jsHint pg.2](/documentation/testing/jshint-love-letter-genie-2.PNG)
+![jsHint pg.3](/documentation/testing/jshint-love-letter-genie-3.PNG)
 
 ### HTML Code Validation
 
