@@ -35,6 +35,7 @@ This is joint project for the February 2024 Hackathon with Code Institute. Below
 - [Testing \& Validation](#testing--validation)
   - [Functional Testing of Website](#functional-testing-of-website)
     - [Home Page](#home-page-1)
+    - [Gift Shop Page](#gift-shop-page-1)
     - [Team Members Page](#team-members-page-1)
   - [WAVE Evalutation Tool](#wave-evaluation-tool)
   - [PageSpeed Insight Tests](#pagespeed-insight-tests)
