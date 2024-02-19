@@ -410,7 +410,7 @@ footer.text-center.text-lg-start.text-white {
 
 .theme-toggle-btn {
   background-color: var(--accent-color);
-  color: var(--white-smoke);
+  color: var(--black-color);
 
   display: flex;
   justify-content: center;
